@@ -31,7 +31,7 @@
       svg += '<g class="node" data-id="' + p.id + '" style="cursor:pointer">';
       svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="17" fill="' + factionColor(pv.owner) + '"' +
         (sel ? ' stroke="#E0C040" stroke-width="4"' : mine ? ' stroke="#F0F0E0" stroke-width="1.5"' : "") + "/>";
-      if (mine && S.done[p.id]) {
+      if (mine && Commands.remaining(p.id) <= 0) {
         svg += '<text x="' + p.x + '" y="' + (p.y + 6) + '" text-anchor="middle" font-size="18" fill="#181410" font-weight="bold">✓</text>';
       }
       svg += '<text x="' + p.x + '" y="' + (p.y + 38) + '" text-anchor="middle" font-size="21" fill="#F0F0E0" font-weight="bold" style="paint-order:stroke;stroke:#181410;stroke-width:4px;">' + p.name + "</text>";

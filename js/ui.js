@@ -51,19 +51,23 @@
     }
 
     if (mine) {
-      h += '<h3>指令' + (S.done[selected] ? '<small>本月已執行</small>' : "") + "</h3>";
+      var used = Commands.usedList(selected).length, bud = Commands.budget(selected);
+      var spent = used >= bud;
+      var drafted = Commands.usedList(selected).indexOf("draft") >= 0;
+      h += '<h3>指令<small>本月 ' + used + " / " + bud + "(駐將數,上限3)</small></h3>";
       h += '<div class="cmds">';
       Object.keys(Commands.CMDS).forEach(function (cid) {
         var c = Commands.CMDS[cid];
         var cost = [];
         if (c.gold) cost.push("金" + c.gold);
         if (c.food) cost.push("糧" + c.food);
-        h += '<button class="cmd" data-cmd="' + cid + '"' + (S.done[selected] ? " disabled" : "") + ">" +
+        var off = spent || (cid === "draft" && drafted);
+        h += '<button class="cmd" data-cmd="' + cid + '"' + (off ? " disabled" : "") + ">" +
           c.name + (cost.length ? '<small>' + cost.join(" ") + "</small>" : "") + "</button>";
       });
       h += "</div>";
       h += "<h3>軍務・人事</h3>";
-      var dis = S.done[selected] ? " disabled" : "";
+      var dis = spent ? " disabled" : "";
       h += '<div class="cmds">' +
         '<button class="mil" data-mil="march"' + dis + ">出征<small>攻打鄰州</small></button>" +
         '<button class="mil" data-mil="move"' + dis + ">移動<small>調往我方鄰州</small></button>" +

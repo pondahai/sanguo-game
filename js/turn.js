@@ -28,7 +28,7 @@
       var provs = Object.keys(S.prov).filter(function (p) { return S.prov[p].owner === fid; });
       for (var i = 0; i < provs.length; i++) {
         var pid = provs[i], pv = S.prov[pid];
-        if (S.done[pid] || pv.troops < 6000 || pv.train < 50 || !Commands.officersIn(pid, fid).length) continue;
+        if (Commands.remaining(pid) <= 0 || pv.troops < 6000 || pv.train < 50 || !Commands.officersIn(pid, fid).length) continue;
         var pd = PROVINCES.find(function (x) { return x.id === pid; });
         var target = null, tScore = 1e18;
         pd.neighbors.forEach(function (nid) {
@@ -40,7 +40,7 @@
           if (atk > def * need && def < tScore) { tScore = def; target = nid; }
         });
         if (!target) continue;
-        S.done[pid] = "march";
+        Commands.consume(pid, "march");
         if (S.prov[target].owner === S.player && !interactive &&
             Commands.officersIn(target, S.player).length) {
           interactive = { from: pid, target: target, fac: fid };
@@ -51,20 +51,23 @@
       }
     });
 
-    /* 內政 */
+    /* 內政: 依預算(駐將數,上限3)逐道下令, 優先序同一條鏈 */
     Object.keys(S.prov).forEach(function (pid) {
       var pv = S.prov[pid];
-      if (!pv.owner || pv.owner === S.player || S.done[pid]) return;
-      var cmd = null;
-      var troopCap = Math.min(12000, pv.farm * 12); /* 糧產養得起才徵 */
-      if (pv.loyal < 50 && pv.food >= 500) cmd = "give";
-      else if (pv.food < pv.troops * 0.4 && pv.gold >= 100) cmd = "farm";
-      else if (pv.troops < troopCap && pv.gold >= 200 && pv.food >= 1000 && pv.loyal > 55) cmd = "draft";
-      else if (S.month === 4 && pv.flood < 50 && pv.gold >= 50) cmd = "flood";
-      else if (pv.train < 70) cmd = "train";
-      else if (pv.gold >= 100) cmd = (pv.farm / pv.farmMax <= pv.trade / pv.tradeMax) ? "farm" : "trade";
-      else cmd = "search";
-      Commands.exec(pid, cmd);
+      if (!pv.owner || pv.owner === S.player) return;
+      for (var k = 0; k < 3 && Commands.remaining(pid) > 0; k++) {
+        var used = Commands.usedList(pid);
+        var cmd = null;
+        var troopCap = Math.min(12000, pv.farm * 12); /* 糧產養得起才徵 */
+        if (pv.loyal < 50 && pv.food >= 500) cmd = "give";
+        else if (pv.food < pv.troops * 0.4 && pv.gold >= 100) cmd = "farm";
+        else if (used.indexOf("draft") < 0 && pv.troops < troopCap && pv.gold >= 200 && pv.food >= 1000 && pv.loyal > 55) cmd = "draft";
+        else if (S.month === 4 && pv.flood < 50 && pv.gold >= 50) cmd = "flood";
+        else if (pv.train < 70) cmd = "train";
+        else if (pv.gold >= 100) cmd = (pv.farm / pv.farmMax <= pv.trade / pv.tradeMax) ? "farm" : "trade";
+        else cmd = "search";
+        if (!Commands.exec(pid, cmd).ok) break;
+      }
     });
     return interactive;
   }

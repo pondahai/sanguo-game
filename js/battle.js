@@ -26,7 +26,7 @@
 
   function armyDialog(pid, isMarch) {
     var S = State.get(), pv = S.prov[pid];
-    if (S.done[pid]) { Turn.log("⚠ 本月已下過指令"); UI.refresh(); return; }
+    if (Commands.remaining(pid) <= 0) { Turn.log("⚠ 本月指令已用盡"); UI.refresh(); return; }
     var targets = pickTargets(pid, isMarch);
     if (!targets.length) { Turn.log("⚠ 無" + (isMarch ? "可出兵的鄰州" : "相鄰我方州郡")); UI.refresh(); return; }
     var staff = Commands.officersIn(pid, pv.owner);
@@ -57,7 +57,7 @@
       if (isMarch && troops < 100) { Turn.log("⚠ 兵力太少"); return; }
       var target = $("dlg-target").value;
       pv.troops -= troops; pv.food -= food;
-      S.done[pid] = isMarch ? "march" : "move";
+      Commands.consume(pid, isMarch ? "march" : "move");
       $("modal").style.display = "none";
       if (isMarch) start(pid, target, sel, troops, food, {});
       else doMove(pid, target, sel, troops, food);

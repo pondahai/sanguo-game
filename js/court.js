@@ -8,8 +8,7 @@
   }
   function close() { $("modal").style.display = "none"; UI.refresh(); }
   function guard(pid) {
-    var S = State.get();
-    if (S.done[pid]) { Turn.log("⚠ 本月已下過指令"); UI.refresh(); return false; }
+    if (Commands.remaining(pid) <= 0) { Turn.log("⚠ 本月指令已用盡"); UI.refresh(); return false; }
     return true;
   }
   function bestMei(pid) {
@@ -37,7 +36,7 @@
         pv.gold -= 200;
         var v = 12 + Math.round(Math.random() * 8);
         S.off[o.name].loyal = Math.min(100, S.off[o.name].loyal + v);
-        S.done[pid] = "reward";
+        Commands.consume(pid, "reward");
         Turn.log("賞賜【" + o.name + "】金帛, 忠誠 +" + v);
         close();
       };
@@ -70,7 +69,7 @@
       n.onclick = function () {
         var t = pool[+n.getAttribute("data-i")];
         pv.gold -= 500;
-        S.done[pid] = "poach";
+        Commands.consume(pid, "poach");
         var st = S.off[t.o.name];
         var p = (90 - st.loyal) / 90 * (0.4 + bestMei(pid) / 200);
         if (Math.random() < Math.max(0.05, p)) {
@@ -111,7 +110,7 @@
       b.onclick = function () {
         var f = b.getAttribute("data-f"), act = b.getAttribute("data-a");
         var key = [S.player, f].sort().join("|");
-        S.done[pid] = "diplomacy";
+        Commands.consume(pid, "diplomacy");
         if (act === "break") {
           delete S.ally[key];
           Turn.log("與【" + S.factions[f].name + "】斷盟!");

@@ -76,11 +76,29 @@
       } }
   };
 
+  /* ---- 行動預算: 每州每月指令數 = min(3, 駐將數), 無將仍有 1 (僅移動等可用) ---- */
+  function usedList(pid) {
+    var S = State.get();
+    var u = S.done[pid];
+    if (!u) return (S.done[pid] = []);
+    if (typeof u === "string") return (S.done[pid] = [u]); /* 舊存檔遷移 */
+    return u;
+  }
+  function budget(pid) {
+    var S = State.get(), pv = S.prov[pid];
+    var n = pv && pv.owner ? officersIn(pid, pv.owner).length : 0;
+    return Math.min(3, Math.max(1, n));
+  }
+  function remaining(pid) { return budget(pid) - usedList(pid).length; }
+  function consume(pid, cmdId) { usedList(pid).push(cmdId); }
+
   /* 執行指令。回傳 {ok, msg} */
   function exec(pid, cmdId) {
     var S = State.get(), pv = S.prov[pid], c = CMDS[cmdId];
     if (!pv || !c) return { ok: false, msg: "無此指令" };
-    if (S.done[pid]) return { ok: false, msg: "本月已下過指令" };
+    var used = usedList(pid);
+    if (used.length >= budget(pid)) return { ok: false, msg: "本月指令已用盡(" + used.length + "/" + budget(pid) + ")" };
+    if (cmdId === "draft" && used.indexOf("draft") >= 0) return { ok: false, msg: "本月已徵過兵" };
     if ((c.gold || 0) > pv.gold) return { ok: false, msg: "金不足" };
     if ((c.food || 0) > pv.food) return { ok: false, msg: "糧不足" };
     var staff = officersIn(pid, pv.owner);
@@ -89,9 +107,10 @@
     pv.gold -= c.gold || 0;
     pv.food -= c.food || 0;
     var msg = c.run(pv, ex, pid);
-    S.done[pid] = cmdId;
+    consume(pid, cmdId);
     return { ok: true, msg: msg };
   }
 
-  window.Commands = { CMDS: CMDS, exec: exec, officersIn: officersIn, freeOfficersIn: freeOfficersIn };
+  window.Commands = { CMDS: CMDS, exec: exec, officersIn: officersIn, freeOfficersIn: freeOfficersIn,
+    budget: budget, remaining: remaining, usedList: usedList, consume: consume };
 })();
