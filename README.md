@@ -6,6 +6,10 @@
 
 **▶ 立即遊玩**：<https://pondahai.github.io/sanguo-game/>
 
+<img width="1053" height="492" alt="748829592_10243130620985952_7455313585502877106_n" src="https://github.com/user-attachments/assets/91faacd4-aed9-4bb6-a9a3-d49aeb9fac1f" />
+<img width="1045" height="518" alt="748745947_10243130611345711_5900534793639820769_n" src="https://github.com/user-attachments/assets/d9c057ac-c093-4400-999e-3abf96b7868c" />
+<img width="1048" height="509" alt="749330443_10243130615385812_1158836115690613538_n" src="https://github.com/user-attachments/assets/97a0cfb1-2331-4a4f-b9d2-b1f67a4a5c6e" />
+
 ## 特色
 
 - **165 名武將**，資料轉自姊妹專案 [sanguo-wiki](https://github.com/pondahai/sanguo-wiki)
