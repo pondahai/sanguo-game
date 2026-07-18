@@ -18,7 +18,7 @@
     S = {
       year: SCENARIO.start.year, month: SCENARIO.start.month,
       player: playerFactionId,
-      factions: {}, prov: {}, off: {}, done: {}, log: [], ally: {}
+      factions: {}, prov: {}, off: {}, done: {}, log: [], ally: {}, chronicle: []
     };
     var provIds = PROVINCES.map(function (p) { return p.id; });
 

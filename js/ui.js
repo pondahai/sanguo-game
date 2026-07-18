@@ -16,10 +16,12 @@
       '<span class="spacer"></span>' +
       '<a href="roster.html" target="_blank" style="color:var(--dim);font-size:13px;">武將名冊</a>' +
       '<a href="face.html" target="_blank" style="color:var(--dim);font-size:13px;">臉譜工房</a>' +
+      '<button id="btn-novel">演義</button>' +
       '<button id="btn-next">下月 ▶</button>' +
       '<button id="btn-save">匯出存檔</button>' +
       '<label class="filebtn">讀檔<input type="file" id="btn-load" accept=".json" hidden></label>';
     el("btn-next").onclick = function () { Turn.nextMonth(refresh); };
+    el("btn-novel").onclick = function () { Novel.open(); };
     el("btn-save").onclick = State.exportSave;
     el("btn-load").onchange = function (e) {
       if (e.target.files[0]) State.importSave(e.target.files[0], refresh);

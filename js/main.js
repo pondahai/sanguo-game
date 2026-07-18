@@ -3,8 +3,15 @@
   "use strict";
   function newGameFlow() {
     UI.chooser(function (fid) {
-      State.newGame(fid);
-      Turn.log("你成為【" + State.get().factions[fid].name + "】之主, 亂世爭霸開始!");
+      var S = State.newGame(fid);
+      /* 開局天下大勢寫入實錄 (演義生成的第一章素材) */
+      var lay = Object.keys(S.factions).map(function (f) {
+        var ps = PROVINCES.filter(function (p) { return S.prov[p.id].owner === f; })
+          .map(function (p) { return p.name; }).join("、");
+        return S.factions[f].name + "據" + ps;
+      }).join("；");
+      Turn.chron("【開局】" + S.year + "年" + S.month + "月 董卓亂政, 群雄並起: " + lay + "。其餘州郡皆為中立之地。玩家勢力為" + S.factions[fid].name + "。");
+      Turn.log("你成為【" + S.factions[fid].name + "】之主, 亂世爭霸開始!");
       State.save();
       UI.refresh();
     });

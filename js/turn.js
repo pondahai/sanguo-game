@@ -5,8 +5,18 @@
 
   function log(msg) {
     var S = State.get();
-    S.log.unshift(S.year + "年" + S.month + "月　" + msg);
+    var line = S.year + "年" + S.month + "月　" + msg;
+    S.log.unshift(line);
     if (S.log.length > 120) S.log.pop();
+    /* 戰局實錄: 完整保存大事(供演義生成), 濾掉戰術雜訊與警告 */
+    var noise = (msg.indexOf("〔戰〕") === 0 && msg.indexOf("單挑") < 0 && msg.indexOf("被俘") < 0) ||
+                msg.indexOf("⚠") === 0;
+    if (!noise) (S.chronicle = S.chronicle || []).push(line);
+  }
+  /* 只進實錄不進畫面日誌 (開局佈局等) */
+  function chron(msg) {
+    var S = State.get();
+    (S.chronicle = S.chronicle || []).push(msg);
   }
 
   function allied(a, b) {
@@ -175,5 +185,5 @@
     else cont();
   }
 
-  window.Turn = { nextMonth: nextMonth, log: log, allied: allied };
+  window.Turn = { nextMonth: nextMonth, log: log, chron: chron, allied: allied };
 })();
