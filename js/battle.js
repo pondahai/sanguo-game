@@ -77,14 +77,14 @@
     var seed = State.h32(pid), t = [];
     for (var y = 0; y < GH; y++) { t.push(new Array(GW).fill(0)); }
     if (seed % 3 === 0) { /* 河流帶渡口 */
-      var col = 5 + (seed >> 4) % 3;
+      var col = 5 + (seed >>> 4) % 3;
       for (var y2 = 0; y2 < GH; y2++) t[y2][col] = 2;
-      t[(seed >> 6) % GH][col] = 0;
-      t[((seed >> 9) % GH)][col] = 0;
+      t[(seed >>> 6) % GH][col] = 0;
+      t[((seed >>> 9) % GH)][col] = 0;
     }
-    var n = 8 + (seed >> 3) % 5;
+    var n = 8 + (seed >>> 3) % 5;
     for (var i = 0; i < n; i++) {
-      var x = 2 + (seed >> (i * 2) & 1023) % (GW - 3), y3 = (seed >> (i * 3 + 5) & 1023) % GH;
+      var x = 2 + (seed >>> (i * 2) & 1023) % (GW - 3), y3 = (seed >>> (i * 3 + 5) & 1023) % GH;
       if (t[y3][x] === 0 && !(x === 10 && y3 === 4)) t[y3][x] = 1;
     }
     t[4][10] = 3; /* 城 */
@@ -197,8 +197,9 @@
     $("bt-flee").onclick = function () { finish(B.pSide === "def", true); };
     $("battle").querySelectorAll(".bt-bottom button").forEach(function (b) {
       b.onclick = function () {
+        if (!B) return;
         var m = b.getAttribute("data-m");
-        if (m === "wait") { B.sel.acted = true; B.sel = null; B.mode = null; }
+        if (m === "wait") { if (B.sel) B.sel.acted = true; B.sel = null; B.mode = null; }
         else B.mode = m;
         render();
       };
@@ -209,6 +210,7 @@
   }
 
   function cellClick(x, y) {
+    if (!B) return; /* 戰鬥已結束的殘留 DOM 點擊 */
     var u = unitAt(x, y), k = x + "," + y;
     if (B.mode === "fire" && B.sel && !B.sel.acted && dist(B.sel, { x: x, y: y }) <= 2) {
       var p = uZhi(B.sel) / 130 + 0.15;
@@ -274,9 +276,9 @@
       var v = dmg(a, d);
       blog(uName(a) + "突擊" + uName(d) + ", 殲敵 " + v);
       applyDmg(d, v);
-      if (B.units.indexOf(d) >= 0) applyDmg(a, Math.round(dmg(d, a) * 0.5)); /* 反擊 */
-      a.acted = true; B.sel = null; B.mode = null;
-      if (B) render();
+      /* applyDmg 可能終結戰鬥(B=null), 之後全部要防 */
+      if (B && B.units.indexOf(d) >= 0) applyDmg(a, Math.round(dmg(d, a) * 0.5)); /* 反擊 */
+      if (B) { a.acted = true; B.sel = null; B.mode = null; render(); }
     };
     if (canDuel) $("am-duel").onclick = function () {
       $("modal").style.display = "none";
@@ -329,8 +331,7 @@
           } else {
             applyDmg(loseU, Math.round(loseU.troops * 0.3));
           }
-          a.acted = true; B.sel = null; B.mode = null;
-          if (B) render();
+          if (B) { a.acted = true; B.sel = null; B.mode = null; render(); }
         }, 1400);
       }
     }, 750);
@@ -426,6 +427,7 @@
     var onEnd = B.onEnd;
     B = null;
     $("battle").style.display = "none";
+    $("battle").innerHTML = ""; /* 清掉殘留 DOM, 杜絕舊 handler 誤觸 */
     processCaptives(function () {
       var winAll = Object.keys(S.prov).every(function (p) { return S.prov[p].owner === S.player; });
       if (winAll) { Turn.log("★★★ 天下歸一! 你統一了全境! ★★★"); S.gameOver = true; }
@@ -531,6 +533,7 @@
     moveDialog: function (pid) { armyDialog(pid, false); },
     active: function () { return !!B; },
     autoResolve: autoResolve,
+    _terrain: makeTerrain, /* 測試用 */
     /* AI 攻打玩家 → 玩家守城互動戰 */
     startDefense: function (req, onEnd) {
       var S = State.get(), fv = S.prov[req.from];
