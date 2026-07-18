@@ -14,6 +14,25 @@
     try { localStorage.setItem(CFG_KEY, JSON.stringify(c)); } catch (e) {}
   }
 
+  /* 端點正規化: 去尾斜線, 沒帶 /v1 自動補 (玩家填主機或填到 /v1 都通) */
+  function base(url) {
+    url = url.replace(/\/+$/, "");
+    if (!/\/v\d+$/.test(url)) url += "/v1";
+    return url;
+  }
+
+  /* ---- 模型清單: GET {url}/models, 玩家瀏覽器直連 ---- */
+  function fetchModels(url, key, cb) {
+    fetch(base(url) + "/models", {
+      headers: key ? { Authorization: "Bearer " + key } : {}
+    }).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    }).then(function (d) {
+      cb(null, (d.data || []).map(function (m) { return m.id; }));
+    }).catch(function (e) { cb(e); });
+  }
+
   /* ---- 素材: 現況 + 實錄 ---- */
   function situation() {
     var S = State.get(), lines = [];
@@ -66,7 +85,7 @@
       };
       /* vLLM/Qwen 系: 關閉 thinking 直接寫正文; 不支援的端點會 400, 降級重試 */
       if (disableThinking) body.chat_template_kwargs = { enable_thinking: false };
-      return fetch(c.url.replace(/\/+$/, "") + "/chat/completions", {
+      return fetch(base(c.url) + "/chat/completions", {
         method: "POST",
         signal: aborter.signal,
         headers: Object.assign({ "Content-Type": "application/json" },
@@ -115,13 +134,30 @@
       '只根據實錄寫作，不憑模型記憶——你的世界線，你的演義。</p>' +
       '<label>端點 URL <input type="text" id="nv-url" style="width:100%;" placeholder="https://.../v1 (OpenAI 相容)" value="' + (c.url || "") + '"></label>' +
       '<label>API Key <input type="password" id="nv-key" style="width:100%;" placeholder="沒有可留空" value="' + (c.key || "") + '"></label>' +
-      '<label>模型 <input type="text" id="nv-model" style="width:100%;" placeholder="例: qwen3.6" value="' + (c.model || "") + '"></label>' +
+      '<label>模型 <span style="display:flex;gap:6px;">' +
+        '<input type="text" id="nv-model" list="nv-models" style="flex:1;" placeholder="填好端點後按「取得清單」" value="' + (c.model || "") + '">' +
+        '<datalist id="nv-models"></datalist>' +
+        '<button id="nv-fetch" type="button">取得清單</button></span>' +
+      '<small id="nv-mstat" style="color:var(--dim);font-size:11px;"></small></label>' +
       '<label>回數 <select id="nv-rounds"><option>3</option><option selected>5</option><option>8</option></select></label>' +
       '<p style="font-size:11px;color:var(--dim);">設定只存在你的瀏覽器，金鑰只送往你填的端點。<br>注意: https 頁面無法呼叫 http 端點(混合內容)，本地端點請下載 repo 本地跑。</p>' +
       '<div class="dlg-btns"><button id="nv-go">開始生成</button><button id="nv-x">取消</button></div></div>';
     $("modal").innerHTML = h;
     $("modal").style.display = "flex";
     $("nv-x").onclick = function () { $("modal").style.display = "none"; };
+    function loadModels() {
+      var url = $("nv-url").value.trim();
+      if (!url) { $("nv-mstat").textContent = "先填端點 URL"; return; }
+      $("nv-mstat").textContent = "查詢中…";
+      fetchModels(url, $("nv-key").value.trim(), function (err, list) {
+        if (err) { $("nv-mstat").textContent = "取不到清單(" + err.message + "), 可手動輸入"; return; }
+        $("nv-models").innerHTML = list.map(function (m) { return '<option value="' + m + '">'; }).join("");
+        $("nv-mstat").textContent = "找到 " + list.length + " 個模型, 點模型欄選取";
+        if (!$("nv-model").value && list.length) $("nv-model").value = list[0];
+      });
+    }
+    $("nv-fetch").onclick = loadModels;
+    if (c.url) loadModels(); /* 有存過端點就自動抓 */
     $("nv-go").onclick = function () {
       var conf = { url: $("nv-url").value.trim(), key: $("nv-key").value.trim(), model: $("nv-model").value.trim() };
       if (!conf.url || !conf.model) { alert("請填端點與模型"); return; }
