@@ -19,6 +19,9 @@
     (S.chronicle = S.chronicle || []).push(msg);
   }
 
+  /* 本月過世武將, 月結算後以訃聞彈窗公告 */
+  var pendingDeaths = [];
+
   function allied(a, b) {
     var S = State.get();
     if (!a || !b) return false;
@@ -136,7 +139,9 @@
         if (st.fac) {
           log("【訃】" + o.name + "病逝");
           var fac = S.factions[st.fac];
-          if (fac && fac.ruler === o.name) succession(st.fac);
+          var wasRuler = !!(fac && fac.ruler === o.name);
+          pendingDeaths.push({ o: o, fac: fac ? fac.name : "在野", wasRuler: wasRuler });
+          if (wasRuler) succession(st.fac);
         }
       }
     });
@@ -179,6 +184,7 @@
         return;
       }
       if (cb) cb();
+      if (pendingDeaths.length) UI.obituary(pendingDeaths.splice(0));
     }
     var atk = aiTurn();
     if (atk) Battle.startDefense(atk, cont);

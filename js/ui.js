@@ -128,6 +128,24 @@
     };
   }
 
+  /* --- 訃聞彈窗: 武將過世時醒目公告 --- */
+  function obituary(list) {
+    var S = State.get();
+    var h = '<div class="obit"><h1>訃 聞</h1>';
+    list.forEach(function (d) {
+      var o = d.o;
+      var fp = Object.assign({ wu: o.stats.wu, zhi: o.stats.zhi }, o.face);
+      var age = o.birth ? "享年 " + (S.year - o.birth) : "";
+      h += '<div class="obit-row"><span style="filter:grayscale(.85)">' + Face.render(fp, 72, o.name) + "</span>" +
+        "<div><b>" + o.name + "</b><small>" + d.fac + "</small>" +
+        "<p>" + S.year + "年病逝。" + age + (d.wasRuler ? "　一方之主, 就此殞落。" : "") + "</p></div></div>";
+    });
+    h += '<div class="dlg-btns"><button id="obit-ok">節哀</button></div></div>';
+    el("overlay").innerHTML = h;
+    el("overlay").style.display = "flex";
+    el("obit-ok").onclick = function () { el("overlay").style.display = "none"; };
+  }
+
   /* --- 選君主畫面 --- */
   function chooser(onPick) {
     var h = '<div class="choose"><h1>三 國 志</h1>' +
@@ -149,5 +167,5 @@
     });
   }
 
-  window.UI = { refresh: refresh, chooser: chooser, select: select, endScreen: endScreen };
+  window.UI = { refresh: refresh, chooser: chooser, select: select, endScreen: endScreen, obituary: obituary };
 })();
