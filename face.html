@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>臉譜工房 — 三國志</title>
+<style>
+  :root { --bg:#181410; --card:#2A2014; --line:#805020; --text:#F0F0E0; --dim:#908C80; --gold:#E0C040; }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--text); font-family:"Microsoft JhengHei","PingFang TC",sans-serif; padding:24px; max-width:860px; margin:0 auto; }
+  h1 { font-size:22px; letter-spacing:.3em; color:var(--gold); margin-bottom:4px; }
+  .sub { color:var(--dim); font-size:13px; margin-bottom:20px; }
+  .sub a { color:var(--gold); text-decoration:none; }
+  .wrap { display:flex; gap:24px; flex-wrap:wrap; }
+  .stage { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; text-align:center; flex:0 0 260px; }
+  .stage .sizes { display:flex; gap:14px; align-items:flex-end; justify-content:center; margin-top:14px; }
+  .stage .sizes span { display:block; font-size:11px; color:var(--dim); margin-top:4px; }
+  .panel { flex:1; min-width:300px; }
+  .grp { margin-bottom:14px; }
+  .grp label.t { display:block; font-size:13px; color:var(--dim); margin-bottom:6px; }
+  .opts { display:flex; gap:6px; flex-wrap:wrap; }
+  .opt { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:6px 12px; font-size:13px; cursor:pointer; color:var(--text); font-family:inherit; }
+  .opt.on { border-color:var(--gold); color:var(--gold); }
+  .opt .sw { display:inline-block; width:11px; height:11px; border-radius:50%; margin-right:5px; vertical-align:-1px; }
+  input[type=range] { width:100%; accent-color:var(--gold); }
+  .sliderrow { display:flex; align-items:center; gap:10px; }
+  .sliderrow b { width:34px; text-align:right; font-size:14px; }
+  .actions { display:flex; gap:10px; margin-top:18px; flex-wrap:wrap; }
+  .actions button, .namebox input { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:8px 16px; font-size:14px; color:var(--text); font-family:inherit; cursor:pointer; }
+  .actions button:hover { border-color:var(--gold); }
+  .namebox { display:flex; gap:8px; margin-top:10px; }
+  .namebox input { cursor:text; width:160px; }
+</style>
+</head>
+<body>
+<h1>臉 譜 工 房</h1>
+<p class="sub">國劇臉譜式八位元頭像生成器 — <a href="index.html">三國志（遊戲本體）</a>的武將臉譜引擎，開放試玩。
+十六色母調色盤＋棋盤格抖色，紫臉是藍紅抖出來的。</p>
+<div class="wrap">
+  <div class="stage">
+    <div id="big"></div>
+    <div class="sizes">
+      <div><div id="mid"></div><span>44px 列表</span></div>
+      <div><div id="small"></div><span>32px 棋子(粗版)</span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="grp"><label class="t">性格底色</label><div class="opts" id="g-color"></div></div>
+    <div class="grp"><label class="t">武力（眉形斜度粗細・環眼）</label>
+      <div class="sliderrow"><input type="range" id="g-wu" min="0" max="100" step="1" value="85"><b id="o-wu">85</b></div></div>
+    <div class="grp"><label class="t">智力（額頭紋樣 ≥60）</label>
+      <div class="sliderrow"><input type="range" id="g-zhi" min="0" max="100" step="1" value="55"><b id="o-zhi">55</b></div></div>
+    <div class="grp"><label class="t">鬍鬚</label><div class="opts" id="g-beard"></div></div>
+    <div class="grp"><label class="t">頭冠</label><div class="opts" id="g-hat"></div></div>
+    <div class="grp"><label class="t">巾色（限綸巾）</label><div class="opts" id="g-fab"></div></div>
+    <div class="grp"><label class="t">特殊</label><div class="opts">
+      <button class="opt" id="g-cheek">蝴蝶臉頰紋</button>
+      <button class="opt" id="g-old">老將白鬚</button>
+    </div></div>
+    <div class="actions">
+      <button id="btn-rand">🎲 隨機</button>
+      <button id="btn-dl">下載 SVG</button>
+    </div>
+    <div class="namebox">
+      <input id="name-in" placeholder="輸入名字→確定性生成" maxlength="12">
+      <button class="opt" id="btn-name">依名生成</button>
+    </div>
+  </div>
+</div>
+<script src="js/face.js?v=11"></script>
+<script>
+var P = { color:"red", wu:85, zhi:55, beard:2, hat:"topknot", fab:null, cheek:null, old:false };
+var COLORS = Object.keys(Face.PAL);
+var BEARDS = ["無鬚","短髭","長髯","虯髯"];
+var HATS = [["topknot","束髮髻"],["crown","冕冠"],["helmet","兜鍪"],["scarf","綸巾"],["civil","進賢冠"]];
+var FABS = [[null,"預設青"],[["#3E7A50","#28543A"],"關羽綠"],[["#C03028","#701810"],"絳紅"],[["#E0C040","#805020"],"杏黃"]];
+
+function opts(id, list, get, set) {
+  var el = document.getElementById(id);
+  el.innerHTML = list.map(function (o, i) {
+    return '<button class="opt" data-i="' + i + '">' + o.label + "</button>";
+  }).join("");
+  el.querySelectorAll(".opt").forEach(function (b, i) {
+    b.onclick = function () { set(list[i].v); render(); };
+  });
+  el.refresh = function () {
+    el.querySelectorAll(".opt").forEach(function (b, i) {
+      b.classList.toggle("on", JSON.stringify(list[i].v) === JSON.stringify(get()));
+    });
+  };
+}
+opts("g-color", COLORS.map(function (c) {
+  return { v: c, label: '<span class="sw" style="background:' + (typeof Face.PAL[c].skin === "string" ? Face.PAL[c].skin : Face.PAL[c].skin[0]) + '"></span>' + Face.PAL[c].label };
+}), function () { return P.color; }, function (v) { P.color = v; });
+opts("g-beard", BEARDS.map(function (n, i) { return { v: i, label: n }; }),
+  function () { return P.beard; }, function (v) { P.beard = v; });
+opts("g-hat", HATS.map(function (h) { return { v: h[0], label: h[1] }; }),
+  function () { return P.hat; }, function (v) { P.hat = v; });
+opts("g-fab", FABS.map(function (f) { return { v: f[0], label: f[1] }; }),
+  function () { return P.fab; }, function (v) { P.fab = v; });
+
+document.getElementById("g-cheek").onclick = function () { P.cheek = P.cheek ? null : "butterfly"; render(); };
+document.getElementById("g-old").onclick = function () { P.old = !P.old; render(); };
+["wu", "zhi"].forEach(function (k) {
+  document.getElementById("g-" + k).addEventListener("input", function (e) {
+    P[k] = +e.target.value; render();
+  });
+});
+
+function h32(s) {
+  var h = 2166136261;
+  for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+  return h;
+}
+document.getElementById("btn-rand").onclick = function () {
+  fromSeed((Math.random() * 4294967296) >>> 0); render();
+};
+document.getElementById("btn-name").onclick = function () {
+  var n = document.getElementById("name-in").value.trim();
+  if (n) { fromSeed(h32(n)); render(); }
+};
+document.getElementById("name-in").addEventListener("keydown", function (e) {
+  if (e.key === "Enter") document.getElementById("btn-name").click();
+});
+function fromSeed(s) {
+  s = s >>> 0;
+  P.color = COLORS[s % 7];
+  P.wu = 30 + (s >>> 3) % 71;
+  P.zhi = 20 + (s >>> 9) % 81;
+  P.beard = (s >>> 5) % 4;
+  P.hat = HATS[(s >>> 11) % 5][0];
+  P.fab = FABS[(s >>> 14) % 4][0];
+  P.cheek = (s >>> 17) % 8 === 0 ? "butterfly" : null;
+  P.old = (s >>> 20) % 6 === 0;
+}
+document.getElementById("btn-dl").onclick = function () {
+  var svg = Face.render(params(), 320, "臉譜");
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
+  a.download = "face.svg";
+  a.click();
+};
+
+function params() {
+  var p = { color: P.color, wu: P.wu, zhi: P.zhi, beard: P.beard, hat: P.hat, old: P.old };
+  if (P.fab) p.fab = P.fab;
+  if (P.cheek) p.cheek = P.cheek;
+  return p;
+}
+function render() {
+  document.getElementById("big").innerHTML = Face.render(params(), 220, "臉譜");
+  document.getElementById("mid").innerHTML = Face.render(params(), 44, "臉譜");
+  document.getElementById("small").innerHTML = Face.render(params(), 32, "臉譜");
+  document.getElementById("o-wu").textContent = P.wu;
+  document.getElementById("o-zhi").textContent = P.zhi;
+  document.getElementById("g-wu").value = P.wu;
+  document.getElementById("g-zhi").value = P.zhi;
+  ["g-color", "g-beard", "g-hat", "g-fab"].forEach(function (id) { document.getElementById(id).refresh(); });
+  document.getElementById("g-cheek").classList.toggle("on", !!P.cheek);
+  document.getElementById("g-old").classList.toggle("on", P.old);
+}
+render();
+</script>
+</body>
+</html>

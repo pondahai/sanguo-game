@@ -15,6 +15,7 @@
       '<span class="fac" style="color:' + f.color + '">◉ ' + f.name + "</span>" +
       '<span class="spacer"></span>' +
       '<a href="roster.html" target="_blank" style="color:var(--dim);font-size:13px;">武將名冊</a>' +
+      '<a href="face.html" target="_blank" style="color:var(--dim);font-size:13px;">臉譜工房</a>' +
       '<button id="btn-next">下月 ▶</button>' +
       '<button id="btn-save">匯出存檔</button>' +
       '<label class="filebtn">讀檔<input type="file" id="btn-load" accept=".json" hidden></label>';

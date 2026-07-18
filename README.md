@@ -5,6 +5,7 @@
 **國劇臉譜式八位元點陣 SVG**，配三國志 II 風 16 色調色盤與棋盤格抖色。
 
 **▶ 立即遊玩**：<https://pondahai.github.io/sanguo-game/>
+　**臉譜工房**（自己捏一張臉譜）：<https://pondahai.github.io/sanguo-game/face.html>
 
 <img width="1053" height="492" alt="748829592_10243130620985952_7455313585502877106_n" src="https://github.com/user-attachments/assets/91faacd4-aed9-4bb6-a9a3-d49aeb9fac1f" />
 <img width="1045" height="518" alt="748745947_10243130611345711_5900534793639820769_n" src="https://github.com/user-attachments/assets/d9c057ac-c093-4400-999e-3abf96b7868c" />
