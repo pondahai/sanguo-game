@@ -41,7 +41,8 @@
       "鐵則（違反即失格）：",
       "1. 你只能根據使用者提供的【戰局實錄】與【天下大勢】寫作。實錄中沒有的重大事件（戰役、攻城、死亡、被俘、投降、結盟、易主）一律不得出現。",
       "2. 嚴禁引入你記憶中真實《三國演義》的情節（桃園結義、三顧茅廬、赤壁之戰、白門樓等），除非實錄中明確記載。這是一條與史實不同的世界線。",
-      "3. 出場人物僅限實錄與大勢中出現者。",
+      "3. 出場人物僅限實錄與大勢中出現者，且【天下大勢】中各勢力的麾下名單是人物歸屬的唯一依據——不得把名單外的武將寫進任何勢力，也不得替武將更換陣營。",
+      "3-1. 若實錄中沒有「會盟」「聯軍」記載，則嚴禁出現十八路諸侯、共推盟主之類的橋段——各勢力是各自為戰的。",
       "4. 允許的潤飾：對話、心理、天氣、旌旗兵馬的描寫等不改變事實的細節。",
       "5. 章回體：每回以七言對聯回目開頭（如「第一回　○○○○○○○　○○○○○○○」），回末用「欲知後事如何，且聽下回分解。」（最後一回改為收束全書的結語）。"
     ].join("\n");
@@ -55,21 +56,27 @@
     return [{ role: "system", content: sys }, { role: "user", content: user }];
   }
 
-  /* ---- SSE 串流 ---- */
-  function generate(c, rounds, onDelta, onDone, onErr) {
+  /* ---- SSE 串流。onThink 回報思考進度(Qwen 系 reasoning_content) ---- */
+  function generate(c, rounds, onDelta, onThink, onDone, onErr) {
     aborter = new AbortController();
-    fetch(c.url.replace(/\/+$/, "") + "/chat/completions", {
-      method: "POST",
-      signal: aborter.signal,
-      headers: Object.assign({ "Content-Type": "application/json" },
-        c.key ? { Authorization: "Bearer " + c.key } : {}),
-      body: JSON.stringify({
+    function request(disableThinking) {
+      var body = {
         model: c.model, messages: buildMessages(rounds),
-        stream: true, temperature: 0.8, max_tokens: 8000
-      })
-    }).then(function (res) {
+        stream: true, temperature: 0.7, max_tokens: 8000
+      };
+      /* vLLM/Qwen 系: 關閉 thinking 直接寫正文; 不支援的端點會 400, 降級重試 */
+      if (disableThinking) body.chat_template_kwargs = { enable_thinking: false };
+      return fetch(c.url.replace(/\/+$/, "") + "/chat/completions", {
+        method: "POST",
+        signal: aborter.signal,
+        headers: Object.assign({ "Content-Type": "application/json" },
+          c.key ? { Authorization: "Bearer " + c.key } : {}),
+        body: JSON.stringify(body)
+      });
+    }
+    function run(res) {
       if (!res.ok) return res.text().then(function (t) { throw new Error("HTTP " + res.status + ": " + t.slice(0, 200)); });
-      var rd = res.body.getReader(), dec = new TextDecoder(), buf = "";
+      var rd = res.body.getReader(), dec = new TextDecoder(), buf = "", thought = 0;
       function pump() {
         rd.read().then(function (r) {
           if (r.done) { onDone(); return; }
@@ -84,12 +91,17 @@
             try {
               var delta = JSON.parse(d).choices[0].delta;
               if (delta && delta.content) onDelta(delta.content);
+              else if (delta && delta.reasoning_content) { thought += delta.reasoning_content.length; onThink(thought); }
             } catch (e) {}
           });
           pump();
         }).catch(onErr);
       }
       pump();
+    }
+    request(true).then(function (res) {
+      if (res.status === 400) return request(false).then(run); /* 端點不認 chat_template_kwargs */
+      return run(res);
     }).catch(onErr);
   }
 
@@ -137,6 +149,9 @@
         text += chunk;
         body.textContent = text;
         body.scrollTop = body.scrollHeight;
+      },
+      function (thoughtChars) {
+        if (!started) body.innerHTML = '<p class="nv-wait">運籌帷幄中……(' + thoughtChars + ' 字思考)</p>';
       },
       function () {
         $("nv-dl").disabled = false;
