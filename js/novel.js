@@ -149,11 +149,13 @@
       var url = $("nv-url").value.trim();
       if (!url) { $("nv-mstat").textContent = "先填端點 URL"; return; }
       $("nv-mstat").textContent = "查詢中…";
+      $("nv-models").innerHTML = ""; /* 換端點重查時先清舊清單, 免得殘留誤導 */
       fetchModels(url, $("nv-key").value.trim(), function (err, list) {
         if (err) { $("nv-mstat").textContent = "取不到清單(" + err.message + "), 可手動輸入"; return; }
         $("nv-models").innerHTML = list.map(function (m) { return '<option value="' + m + '">'; }).join("");
         $("nv-mstat").textContent = "找到 " + list.length + " 個模型, 點模型欄選取";
-        if (!$("nv-model").value && list.length) $("nv-model").value = list[0];
+        /* 模型欄若還留著舊端點的名字, datalist 會因文字不符而顯示不出新選項 */
+        if (list.length && list.indexOf($("nv-model").value) < 0) $("nv-model").value = list[0];
       });
     }
     $("nv-fetch").onclick = loadModels;
