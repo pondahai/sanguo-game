@@ -38,13 +38,26 @@
       return '<option value="' + t + '">' + provData(t).name + "(" + (o ? S.factions[o].name : "中立") + ")</option>";
     }).join("") + "</select></label>";
     h += '<div class="dlg-offs">' + staff.map(function (o, i) {
-      return '<label class="dlg-off"><input type="checkbox" data-i="' + i + '"' + (i < 5 ? " checked" : "") + ">" +
+      var on = i < 5;
+      return '<label class="dlg-off' + (on ? " sel" : " dim") + '"><input type="checkbox" data-i="' + i + '"' + (on ? " checked" : "") + ">" +
         faceOf(o, 40) + o.name + '<small>武' + o.stats.wu + "</small></label>";
     }).join("") + "</div>";
-    h += '<label>兵力 <input type="number" id="dlg-troops" value="' + Math.min(pv.troops, 15000) + '" min="0" max="' + pv.troops + '"> /' + pv.troops + "</label>";
-    h += '<label>帶糧 <input type="number" id="dlg-food" value="' + Math.min(pv.food, 3000) + '" min="0" max="' + pv.food + '"> /' + pv.food + "</label>";
+    h += '<label>兵力 <input type="range" id="dlg-troops" value="' + Math.min(pv.troops, 15000) + '" min="0" max="' + pv.troops + '" step="100"><b id="dlg-troops-v"></b>/' + pv.troops + "</label>";
+    h += '<label>帶糧 <input type="range" id="dlg-food" value="' + Math.min(pv.food, 3000) + '" min="0" max="' + pv.food + '" step="100"><b id="dlg-food-v"></b>/' + pv.food + "</label>";
     h += '<div class="dlg-btns"><button id="dlg-go">' + (isMarch ? "進軍!" : "移動") + '</button><button id="dlg-x">取消</button></div></div>';
     $("modal").innerHTML = h; $("modal").style.display = "flex";
+    /* 選將高亮/黯淡 */
+    $("modal").querySelectorAll(".dlg-off input").forEach(function (c) {
+      c.onchange = function () {
+        c.parentNode.className = "dlg-off" + (c.checked ? " sel" : " dim");
+      };
+    });
+    /* 拉桿即時顯示數值 */
+    ["troops", "food"].forEach(function (k) {
+      var r = $("dlg-" + k), v = $("dlg-" + k + "-v");
+      v.textContent = r.value;
+      r.oninput = function () { v.textContent = r.value; };
+    });
     $("dlg-x").onclick = function () { $("modal").style.display = "none"; };
     $("dlg-go").onclick = function () {
       var sel = [];
