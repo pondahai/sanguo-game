@@ -136,6 +136,29 @@
     }).catch(onErr);
   }
 
+  /* ---- 迷你 markdown 渲染 (零依賴): 標題/粗斜體/分隔線/段落, 先轉義防注入 ---- */
+  function mdRender(src) {
+    var esc = src.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    var out = [], para = [];
+    function flush() {
+      if (!para.length) return;
+      var t = para.join("<br>")
+        .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
+        .replace(/\*([^*]+)\*/g, "<i>$1</i>");
+      out.push("<p>" + t + "</p>");
+      para = [];
+    }
+    esc.split("\n").forEach(function (line) {
+      var m = line.match(/^(#{1,6})\s+(.*)$/);
+      if (m) { flush(); out.push("<h" + Math.min(m[1].length + 1, 6) + ">" + m[2] + "</h" + Math.min(m[1].length + 1, 6) + ">"); return; }
+      if (/^\s*(---+|\*\*\*+)\s*$/.test(line)) { flush(); out.push("<hr>"); return; }
+      if (!line.trim()) { flush(); return; }
+      para.push(line);
+    });
+    flush();
+    return out.join("");
+  }
+
   /* ---- UI ---- */
   function open() {
     var ev = majorEvents();
@@ -196,7 +219,7 @@
       function (chunk) {
         if (!started) { body.innerHTML = ""; started = true; }
         text += chunk;
-        body.textContent = text;
+        body.innerHTML = mdRender(text);
         body.scrollTop = body.scrollHeight;
       },
       function (thoughtChars) {
