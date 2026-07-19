@@ -204,7 +204,9 @@
       h += '<small>點選我方部隊下令。點相鄰敵軍 = 攻擊選項。</small>';
     }
     h += "</div>";
+    h += '<div id="bt-log">' + btLogHtml() + "</div>";
     $("battle").innerHTML = h;
+    var lg = $("bt-log"); lg.scrollTop = lg.scrollHeight;
 
     $("bt-end").onclick = endDay;
     $("bt-flee").onclick = function () { finish(B.pSide === "def", true); };
@@ -241,7 +243,18 @@
   }
 
   /* ================= 戰鬥計算 ================= */
-  function blog(msg) { Turn.log("〔戰〕" + msg); }
+  function blog(msg) {
+    Turn.log("〔戰〕" + msg);
+    /* 戰場內事件紀錄, 供陣中回查 */
+    if (B) {
+      (B.log = B.log || []).push("第" + B.day + "日　" + msg);
+      var el = $("bt-log");
+      if (el) { el.innerHTML = btLogHtml(); el.scrollTop = el.scrollHeight; }
+    }
+  }
+  function btLogHtml() {
+    return (B.log || []).map(function (l) { return "<div>" + l + "</div>"; }).join("");
+  }
 
   function dmg(a, d) {
     var v = Math.round(a.troops * (0.15 + uWu(a) * 0.001) * (0.5 + a.train / 200));
