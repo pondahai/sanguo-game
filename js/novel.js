@@ -53,25 +53,37 @@
     return lines.join("\n");
   }
 
+  /* 例行結算過濾: 每年必發的收稅/秋收流水帳會淹沒主公更迭等大事,
+   * 造成 LLM「迷失在中間」把終局現況當開局設定。玩家下的內政令(開墾/練兵…)仍保留。 */
+  var NOISE = /收稅金|秋收糧/;
+  function majorEvents() {
+    var all = State.get().chronicle || [];
+    var major = all.filter(function (l) { return !NOISE.test(l); });
+    return { lines: major, total: all.length, skipped: all.length - major.length };
+  }
+
   function buildMessages(rounds) {
     var S = State.get();
     var sys = [
       "你是一位章回小說家，以《三國演義》的文體與筆調寫作白話章回小說。",
       "鐵則（違反即失格）：",
-      "1. 你只能根據使用者提供的【戰局實錄】與【天下大勢】寫作。實錄中沒有的重大事件（戰役、攻城、死亡、被俘、投降、結盟、易主）一律不得出現。",
-      "2. 嚴禁引入你記憶中真實《三國演義》的情節（桃園結義、三顧茅廬、赤壁之戰、白門樓等），除非實錄中明確記載。這是一條與史實不同的世界線。",
-      "3. 出場人物僅限實錄與大勢中出現者，且【天下大勢】中各勢力的麾下名單是人物歸屬的唯一依據——不得把名單外的武將寫進任何勢力，也不得替武將更換陣營。",
-      "3-1. 若實錄中沒有「會盟」「聯軍」記載，則嚴禁出現十八路諸侯、共推盟主之類的橋段——各勢力是各自為戰的。",
+      "1. 你只能根據使用者提供的【大事年表】與【天下大勢】寫作。年表中沒有的重大事件（戰役、攻城、死亡、被俘、投降、結盟、易主）一律不得出現。",
+      "2. 嚴禁引入你記憶中真實《三國演義》的情節（桃園結義、三顧茅廬、赤壁之戰、白門樓等），除非年表中明確記載。這是一條與史實不同的世界線。",
+      "3. 出場人物僅限年表與大勢中出現者，且【天下大勢】中各勢力的麾下名單是人物歸屬的唯一依據——不得把名單外的武將寫進任何勢力，也不得替武將更換陣營。",
+      "3-1. 若年表中沒有「會盟」「聯軍」記載，則嚴禁出現十八路諸侯、共推盟主之類的橋段——各勢力是各自為戰的。",
       "4. 允許的潤飾：對話、心理、天氣、旌旗兵馬的描寫等不改變事實的細節。",
-      "5. 章回體：每回以七言對聯回目開頭（如「第一回　○○○○○○○　○○○○○○○」），回末用「欲知後事如何，且聽下回分解。」（最後一回改為收束全書的結語）。"
+      "5. 章回體：每回以七言對聯回目開頭（如「第一回　○○○○○○○　○○○○○○○」），回末用「欲知後事如何，且聽下回分解。」（最後一回改為收束全書的結語）。",
+      "6. 時序鐵則：【大事年表】依年月排序，敘事必須照此順序推進，不得前後顛倒。【天下大勢】是故事「結尾時點」的現況快照，不是開局設定——凡年表中有「訃」「繼立為主公」記載者，該年月之前一律由前任君主在位，繼位只能發生在年表記載的那個年月。"
     ].join("\n");
+    var ev = majorEvents();
     var user = "【劇本】" + SCENARIO.start.year + "年，董卓亂政，群雄並起。玩家勢力為【" +
       S.factions[S.player].name + "】。\n\n" +
-      "【天下大勢（" + S.year + "年" + S.month + "月現況）】\n" + situation() + "\n\n" +
-      "【戰局實錄】（逐月大事，每一條都真實發生，這是唯一可用的事件來源）\n" +
-      (S.chronicle || []).join("\n") + "\n\n" +
-      "請根據以上實錄，以【" + S.factions[S.player].name + "】為主角視角，寫成 " + rounds +
-      " 回章回小說，每回約六百字。記住：只採用實錄事件，可潤飾細節，不得虛構重大事件。";
+      "【天下大勢（" + S.year + "年" + S.month + "月現況——這是故事結尾時點的快照，不是開局！）】\n" + situation() + "\n\n" +
+      "【大事年表】（依年月排序，每一條都真實發生，這是唯一可用的事件來源。" +
+      (ev.skipped > 0 ? "另有 " + ev.skipped + " 條每年例行的收稅、秋收結算已略去，不影響大局。" : "") + "）\n" +
+      ev.lines.join("\n") + "\n\n" +
+      "請根據以上年表，以【" + S.factions[S.player].name + "】為主角視角，依年月時序寫成 " + rounds +
+      " 回章回小說，每回約六百字。記住：只採用年表事件、照時序推進，可潤飾細節，不得虛構重大事件。";
     return [{ role: "system", content: sys }, { role: "user", content: user }];
   }
 
@@ -126,11 +138,10 @@
 
   /* ---- UI ---- */
   function open() {
-    var S = State.get();
-    var n = (S.chronicle || []).length;
+    var ev = majorEvents();
     var c = cfg();
     var h = '<div class="dlg" style="max-width:480px;"><h2>演義生成</h2>' +
-      '<p style="font-size:13px;color:var(--dim);margin-bottom:10px;">根據你的存檔實錄(' + n + ' 條大事)，由你自己的 LLM 寫一部想像三國演義。<br>' +
+      '<p style="font-size:13px;color:var(--dim);margin-bottom:10px;">根據你的存檔實錄(' + ev.total + ' 條中篩出 ' + ev.lines.length + ' 條大事)，由你自己的 LLM 寫一部想像三國演義。<br>' +
       '只根據實錄寫作，不憑模型記憶——你的世界線，你的演義。</p>' +
       '<label>端點 URL <input type="text" id="nv-url" style="width:100%;" placeholder="https://.../v1 (OpenAI 相容)" value="' + (c.url || "") + '"></label>' +
       '<label>API Key <input type="password" id="nv-key" style="width:100%;" placeholder="沒有可留空" value="' + (c.key || "") + '"></label>' +
