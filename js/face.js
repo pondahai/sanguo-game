@@ -89,7 +89,7 @@
     var bc = o.old ? 15 : 2;
     var t = o.wu >= 80 ? 3 : o.wu >= 50 ? 2 : 0, th = o.wu >= 80 ? 2 : 1;
     for (i = 0; i < 7; i++) {
-      x = 4 + i; r = 15 - Math.round(i * t / 6);
+      x = 4 + i; r = (15 - t) + Math.round(i * t / 6);
       for (k = 0; k < th; k++) if (F(x, r - k)) Mi(x, r - k, bc);
     }
     if (o.cheek === "butterfly") {
@@ -189,7 +189,7 @@
     for (y = 9; y <= 13; y++) for (x = 2; x <= 7; x++) if (F(x, y) && g[y][x] === 1) { g[y][x] = 3; g[y][19 - x] = 3; }
     var t = o.wu >= 80 ? 2 : o.wu >= 50 ? 1 : 0, bc = o.old ? 15 : 2;
     for (i = 0; i < 4; i++) {
-      x = 3 + i; y = 10 - Math.round(i * t / 3);
+      x = 3 + i; y = (10 - t) + Math.round(i * t / 3);
       if (F(x, y)) { g[y][x] = bc; g[y][19 - x] = bc; }
       if (o.wu >= 80 && F(x, y - 1)) { g[y - 1][x] = bc; g[y - 1][19 - x] = bc; }
     }
