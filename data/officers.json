@@ -11,6 +11,7 @@
   ],
   "tier": "major",
   "facts": 698,
+  "act": 698,
   "birth": 155,
   "death": 220,
   "stats": {
@@ -39,6 +40,7 @@
   ],
   "tier": "major",
   "facts": 643,
+  "act": 643,
   "birth": 181,
   "death": 234,
   "stats": {
@@ -67,6 +69,7 @@
   ],
   "tier": "major",
   "facts": 548,
+  "act": 548,
   "birth": 161,
   "death": 223,
   "stats": {
@@ -96,6 +99,7 @@
   ],
   "tier": "major",
   "facts": 291,
+  "act": 291,
   "birth": 160,
   "death": 219,
   "stats": {
@@ -125,6 +129,7 @@
   ],
   "tier": "major",
   "facts": 255,
+  "act": 255,
   "birth": null,
   "death": 229,
   "stats": {
@@ -151,6 +156,7 @@
   ],
   "tier": "major",
   "facts": 242,
+  "act": 242,
   "birth": 182,
   "death": 252,
   "stats": {
@@ -176,6 +182,7 @@
   ],
   "tier": "major",
   "facts": 215,
+  "act": 215,
   "birth": 202,
   "death": 264,
   "stats": {
@@ -202,6 +209,7 @@
   ],
   "tier": "major",
   "facts": 213,
+  "act": 213,
   "birth": 166,
   "death": 221,
   "stats": {
@@ -228,6 +236,7 @@
   ],
   "tier": "major",
   "facts": 171,
+  "act": 171,
   "birth": null,
   "death": 234,
   "stats": {
@@ -253,6 +262,7 @@
   ],
   "tier": "major",
   "facts": 164,
+  "act": 164,
   "birth": 179,
   "death": 251,
   "stats": {
@@ -278,6 +288,7 @@
   ],
   "tier": "major",
   "facts": 162,
+  "act": 162,
   "birth": null,
   "death": 202,
   "stats": {
@@ -303,6 +314,7 @@
   ],
   "tier": "major",
   "facts": 138,
+  "act": 138,
   "birth": 176,
   "death": 222,
   "stats": {
@@ -328,6 +340,7 @@
   ],
   "tier": "major",
   "facts": 129,
+  "act": 129,
   "birth": 197,
   "death": 264,
   "stats": {
@@ -354,6 +367,7 @@
   ],
   "tier": "major",
   "facts": 129,
+  "act": 129,
   "birth": null,
   "death": 198,
   "stats": {
@@ -381,6 +395,7 @@
   ],
   "tier": "major",
   "facts": 125,
+  "act": 125,
   "birth": 175,
   "death": 210,
   "stats": {
@@ -406,6 +421,7 @@
   ],
   "tier": "major",
   "facts": 121,
+  "act": 121,
   "birth": 172,
   "death": 217,
   "stats": {
@@ -431,6 +447,7 @@
   ],
   "tier": "major",
   "facts": 112,
+  "act": 112,
   "birth": null,
   "death": 220,
   "stats": {
@@ -457,6 +474,7 @@
   ],
   "tier": "major",
   "facts": 111,
+  "act": 111,
   "birth": 207,
   "death": 271,
   "stats": {
@@ -482,6 +500,7 @@
   ],
   "tier": "major",
   "facts": 99,
+  "act": 99,
   "birth": null,
   "death": 192,
   "stats": {
@@ -507,6 +526,7 @@
   ],
   "tier": "major",
   "facts": 93,
+  "act": 93,
   "birth": 168,
   "death": 223,
   "stats": {
@@ -532,6 +552,7 @@
   ],
   "tier": "major",
   "facts": 93,
+  "act": 93,
   "birth": 169,
   "death": 222,
   "stats": {
@@ -557,6 +578,7 @@
   ],
   "tier": "major",
   "facts": 91,
+  "act": 91,
   "birth": null,
   "death": 220,
   "stats": {
@@ -583,6 +605,7 @@
   ],
   "tier": "major",
   "facts": 90,
+  "act": 90,
   "birth": null,
   "death": null,
   "stats": {
@@ -608,6 +631,7 @@
   ],
   "tier": "major",
   "facts": 89,
+  "act": 89,
   "birth": 187,
   "death": 226,
   "stats": {
@@ -632,8 +656,9 @@
   ],
   "tier": "minor",
   "facts": 88,
-  "birth": null,
-  "death": null,
+  "act": 88,
+  "birth": 211,
+  "death": 265,
   "stats": {
    "wu": 38,
    "zhi": 62,
@@ -657,6 +682,7 @@
   ],
   "tier": "major",
   "facts": 88,
+  "act": 88,
   "birth": null,
   "death": 231,
   "stats": {
@@ -682,6 +708,7 @@
   ],
   "tier": "major",
   "facts": 86,
+  "act": 86,
   "birth": null,
   "death": 227,
   "stats": {
@@ -704,6 +731,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 83,
+  "act": 83,
   "birth": null,
   "death": null,
   "stats": {
@@ -729,6 +757,7 @@
   ],
   "tier": "major",
   "facts": 81,
+  "act": 81,
   "birth": 183,
   "death": 245,
   "stats": {
@@ -751,6 +780,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 80,
+  "act": 80,
   "birth": null,
   "death": null,
   "stats": {
@@ -776,6 +806,7 @@
   ],
   "tier": "major",
   "facts": 75,
+  "act": 75,
   "birth": 142,
   "death": 208,
   "stats": {
@@ -801,6 +832,7 @@
   ],
   "tier": "minor",
   "facts": 73,
+  "act": 73,
   "birth": null,
   "death": null,
   "stats": {
@@ -823,8 +855,9 @@
   "aliases": [],
   "tier": "minor",
   "facts": 72,
-  "birth": null,
-  "death": null,
+  "act": 72,
+  "birth": 205,
+  "death": 239,
   "stats": {
    "wu": 28,
    "zhi": 75,
@@ -845,6 +878,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 72,
+  "act": 72,
   "birth": null,
   "death": null,
   "stats": {
@@ -871,6 +905,7 @@
   ],
   "tier": "major",
   "facts": 70,
+  "act": 70,
   "birth": 175,
   "death": 200,
   "stats": {
@@ -896,6 +931,7 @@
   ],
   "tier": "major",
   "facts": 67,
+  "act": 67,
   "birth": 225,
   "death": 264,
   "stats": {
@@ -921,6 +957,7 @@
   ],
   "tier": "major",
   "facts": 63,
+  "act": 63,
   "birth": null,
   "death": null,
   "stats": {
@@ -943,6 +980,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 63,
+  "act": 63,
   "birth": null,
   "death": null,
   "stats": {
@@ -965,6 +1003,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 62,
+  "act": 62,
   "birth": null,
   "death": null,
   "stats": {
@@ -987,6 +1026,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 61,
+  "act": 61,
   "birth": null,
   "death": null,
   "stats": {
@@ -1009,6 +1049,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 61,
+  "act": 61,
   "birth": null,
   "death": null,
   "stats": {
@@ -1031,6 +1072,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 59,
+  "act": 59,
   "birth": null,
   "death": null,
   "stats": {
@@ -1056,6 +1098,7 @@
   ],
   "tier": "major",
   "facts": 59,
+  "act": 59,
   "birth": 156,
   "death": 236,
   "stats": {
@@ -1082,6 +1125,7 @@
   ],
   "tier": "major",
   "facts": 57,
+  "act": 57,
   "birth": 147,
   "death": 223,
   "stats": {
@@ -1104,6 +1148,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 56,
+  "act": 56,
   "birth": null,
   "death": null,
   "stats": {
@@ -1126,6 +1171,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 55,
+  "act": 55,
   "birth": null,
   "death": null,
   "stats": {
@@ -1150,6 +1196,7 @@
   ],
   "tier": "minor",
   "facts": 55,
+  "act": 55,
   "birth": null,
   "death": null,
   "stats": {
@@ -1175,6 +1222,7 @@
   ],
   "tier": "major",
   "facts": 54,
+  "act": 54,
   "birth": null,
   "death": 219,
   "stats": {
@@ -1200,6 +1248,7 @@
   ],
   "tier": "major",
   "facts": 54,
+  "act": 54,
   "birth": 163,
   "death": 212,
   "stats": {
@@ -1225,6 +1274,7 @@
   ],
   "tier": "major",
   "facts": 54,
+  "act": 54,
   "birth": null,
   "death": 199,
   "stats": {
@@ -1247,6 +1297,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 53,
+  "act": 53,
   "birth": null,
   "death": null,
   "stats": {
@@ -1272,6 +1323,7 @@
   ],
   "tier": "major",
   "facts": 53,
+  "act": 53,
   "birth": null,
   "death": 198,
   "stats": {
@@ -1297,6 +1349,7 @@
   ],
   "tier": "major",
   "facts": 53,
+  "act": 53,
   "birth": 155,
   "death": 191,
   "stats": {
@@ -1319,6 +1372,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 52,
+  "act": 52,
   "birth": null,
   "death": null,
   "stats": {
@@ -1344,6 +1398,7 @@
   ],
   "tier": "major",
   "facts": 51,
+  "act": 51,
   "birth": null,
   "death": 219,
   "stats": {
@@ -1366,6 +1421,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 50,
+  "act": 50,
   "birth": null,
   "death": null,
   "stats": {
@@ -1391,6 +1447,7 @@
   ],
   "tier": "major",
   "facts": 49,
+  "act": 49,
   "birth": 178,
   "death": 219,
   "stats": {
@@ -1417,6 +1474,7 @@
   ],
   "tier": "major",
   "facts": 49,
+  "act": 49,
   "birth": 179,
   "death": 214,
   "stats": {
@@ -1439,6 +1497,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 48,
+  "act": 48,
   "birth": null,
   "death": null,
   "stats": {
@@ -1462,6 +1521,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 48,
+  "act": 48,
   "birth": null,
   "death": null,
   "stats": {
@@ -1487,6 +1547,7 @@
   ],
   "tier": "major",
   "facts": 47,
+  "act": 47,
   "birth": 141,
   "death": 220,
   "stats": {
@@ -1513,6 +1574,7 @@
   ],
   "tier": "major",
   "facts": 47,
+  "act": 47,
   "birth": null,
   "death": null,
   "stats": {
@@ -1536,6 +1598,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 47,
+  "act": 47,
   "birth": null,
   "death": null,
   "stats": {
@@ -1558,6 +1621,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 46,
+  "act": 46,
   "birth": null,
   "death": null,
   "stats": {
@@ -1583,6 +1647,7 @@
   ],
   "tier": "major",
   "facts": 45,
+  "act": 45,
   "birth": null,
   "death": null,
   "stats": {
@@ -1605,6 +1670,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 43,
+  "act": 43,
   "birth": null,
   "death": 198,
   "stats": {
@@ -1627,6 +1693,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 43,
+  "act": 43,
   "birth": null,
   "death": null,
   "stats": {
@@ -1649,6 +1716,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 43,
+  "act": 43,
   "birth": null,
   "death": null,
   "stats": {
@@ -1671,6 +1739,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 42,
+  "act": 42,
   "birth": null,
   "death": null,
   "stats": {
@@ -1693,6 +1762,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 41,
+  "act": 41,
   "birth": null,
   "death": null,
   "stats": {
@@ -1715,6 +1785,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 40,
+  "act": 40,
   "birth": null,
   "death": 197,
   "stats": {
@@ -1737,6 +1808,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 39,
+  "act": 39,
   "birth": null,
   "death": null,
   "stats": {
@@ -1759,8 +1831,9 @@
   "aliases": [],
   "tier": "minor",
   "facts": 39,
-  "birth": null,
-  "death": null,
+  "act": 39,
+  "birth": 203,
+  "death": 253,
   "stats": {
    "wu": 43,
    "zhi": 52,
@@ -1784,6 +1857,7 @@
   ],
   "tier": "major",
   "facts": 38,
+  "act": 38,
   "birth": null,
   "death": 199,
   "stats": {
@@ -1809,6 +1883,7 @@
   ],
   "tier": "minor",
   "facts": 37,
+  "act": 37,
   "birth": null,
   "death": null,
   "stats": {
@@ -1833,6 +1908,7 @@
   ],
   "tier": "minor",
   "facts": 37,
+  "act": 37,
   "birth": null,
   "death": null,
   "stats": {
@@ -1857,8 +1933,9 @@
   ],
   "tier": "minor",
   "facts": 37,
-  "birth": null,
-  "death": null,
+  "act": 37,
+  "birth": 208,
+  "death": 255,
   "stats": {
    "wu": 52,
    "zhi": 41,
@@ -1882,6 +1959,7 @@
   ],
   "tier": "minor",
   "facts": 37,
+  "act": 37,
   "birth": null,
   "death": null,
   "stats": {
@@ -1904,6 +1982,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 36,
+  "act": 36,
   "birth": null,
   "death": null,
   "stats": {
@@ -1926,6 +2005,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 36,
+  "act": 36,
   "birth": null,
   "death": null,
   "stats": {
@@ -1950,6 +2030,7 @@
   ],
   "tier": "major",
   "facts": 35,
+  "act": 35,
   "birth": 137,
   "death": 192,
   "stats": {
@@ -1973,6 +2054,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 34,
+  "act": 34,
   "birth": null,
   "death": null,
   "stats": {
@@ -1995,6 +2077,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 33,
+  "act": 33,
   "birth": null,
   "death": null,
   "stats": {
@@ -2020,6 +2103,7 @@
   ],
   "tier": "major",
   "facts": 33,
+  "act": 33,
   "birth": 170,
   "death": 207,
   "stats": {
@@ -2042,6 +2126,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 33,
+  "act": 33,
   "birth": null,
   "death": 215,
   "stats": {
@@ -2065,6 +2150,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 33,
+  "act": 33,
   "birth": null,
   "death": null,
   "stats": {
@@ -2091,6 +2177,7 @@
   ],
   "tier": "major",
   "facts": 33,
+  "act": 33,
   "birth": null,
   "death": null,
   "stats": {
@@ -2113,6 +2200,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 30,
+  "act": 30,
   "birth": null,
   "death": 197,
   "stats": {
@@ -2137,6 +2225,7 @@
   ],
   "tier": "minor",
   "facts": 30,
+  "act": 30,
   "birth": null,
   "death": null,
   "stats": {
@@ -2159,6 +2248,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 30,
+  "act": 30,
   "birth": null,
   "death": null,
   "stats": {
@@ -2181,6 +2271,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 30,
+  "act": 30,
   "birth": null,
   "death": null,
   "stats": {
@@ -2206,6 +2297,7 @@
   ],
   "tier": "major",
   "facts": 30,
+  "act": 30,
   "birth": 157,
   "death": 214,
   "stats": {
@@ -2228,8 +2320,9 @@
   "aliases": [],
   "tier": "minor",
   "facts": 28,
-  "birth": null,
-  "death": null,
+  "act": 28,
+  "birth": 200,
+  "death": 260,
   "stats": {
    "wu": 53,
    "zhi": 28,
@@ -2253,6 +2346,7 @@
   ],
   "tier": "minor",
   "facts": 28,
+  "act": 28,
   "birth": null,
   "death": null,
   "stats": {
@@ -2275,6 +2369,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 28,
+  "act": 28,
   "birth": null,
   "death": 200,
   "stats": {
@@ -2297,6 +2392,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 28,
+  "act": 28,
   "birth": null,
   "death": null,
   "stats": {
@@ -2319,6 +2415,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 28,
+  "act": 28,
   "birth": null,
   "death": null,
   "stats": {
@@ -2341,6 +2438,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 27,
+  "act": 27,
   "birth": null,
   "death": null,
   "stats": {
@@ -2365,6 +2463,7 @@
   ],
   "tier": "major",
   "facts": 27,
+  "act": 27,
   "birth": 166,
   "death": 206,
   "stats": {
@@ -2390,6 +2489,7 @@
   ],
   "tier": "major",
   "facts": 27,
+  "act": 27,
   "birth": 132,
   "death": 194,
   "stats": {
@@ -2413,6 +2513,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 27,
+  "act": 27,
   "birth": null,
   "death": null,
   "stats": {
@@ -2435,6 +2536,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 27,
+  "act": 27,
   "birth": null,
   "death": 207,
   "stats": {
@@ -2457,6 +2559,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 26,
+  "act": 26,
   "birth": null,
   "death": null,
   "stats": {
@@ -2479,6 +2582,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 26,
+  "act": 26,
   "birth": null,
   "death": null,
   "stats": {
@@ -2501,6 +2605,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 26,
+  "act": 26,
   "birth": null,
   "death": null,
   "stats": {
@@ -2523,6 +2628,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 25,
+  "act": 25,
   "birth": null,
   "death": null,
   "stats": {
@@ -2545,6 +2651,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 25,
+  "act": 25,
   "birth": null,
   "death": null,
   "stats": {
@@ -2567,6 +2674,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 25,
+  "act": 25,
   "birth": null,
   "death": null,
   "stats": {
@@ -2589,6 +2697,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 25,
+  "act": 25,
   "birth": null,
   "death": null,
   "stats": {
@@ -2611,6 +2720,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 25,
+  "act": 25,
   "birth": null,
   "death": null,
   "stats": {
@@ -2633,6 +2743,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 24,
+  "act": 24,
   "birth": null,
   "death": null,
   "stats": {
@@ -2655,6 +2766,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 23,
+  "act": 23,
   "birth": null,
   "death": null,
   "stats": {
@@ -2677,6 +2789,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 23,
+  "act": 23,
   "birth": null,
   "death": null,
   "stats": {
@@ -2699,6 +2812,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 23,
+  "act": 23,
   "birth": null,
   "death": 212,
   "stats": {
@@ -2721,6 +2835,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 23,
+  "act": 23,
   "birth": null,
   "death": null,
   "stats": {
@@ -2743,6 +2858,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 23,
+  "act": 23,
   "birth": null,
   "death": 200,
   "stats": {
@@ -2765,6 +2881,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 22,
+  "act": 22,
   "birth": null,
   "death": null,
   "stats": {
@@ -2789,6 +2906,7 @@
   ],
   "tier": "minor",
   "facts": 22,
+  "act": 22,
   "birth": null,
   "death": null,
   "stats": {
@@ -2814,6 +2932,7 @@
   ],
   "tier": "major",
   "facts": 22,
+  "act": 22,
   "birth": 153,
   "death": 208,
   "stats": {
@@ -2836,6 +2955,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 21,
+  "act": 21,
   "birth": null,
   "death": null,
   "stats": {
@@ -2858,6 +2978,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 21,
+  "act": 21,
   "birth": null,
   "death": null,
   "stats": {
@@ -2881,6 +3002,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 21,
+  "act": 21,
   "birth": null,
   "death": null,
   "stats": {
@@ -2906,6 +3028,7 @@
   ],
   "tier": "minor",
   "facts": 20,
+  "act": 20,
   "birth": null,
   "death": null,
   "stats": {
@@ -2923,11 +3046,58 @@
   "wiki": null
  },
  {
+  "id": "huangquan",
+  "name": "黃權",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 20,
+  "birth": null,
+  "death": 240,
+  "stats": {
+   "wu": 70,
+   "zhi": 84,
+   "zheng": 82,
+   "mei": 72,
+   "yi": 80
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "jiachong",
+  "name": "賈充",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 20,
+  "birth": 217,
+  "death": 282,
+  "stats": {
+   "wu": 50,
+   "zhi": 82,
+   "zheng": 80,
+   "mei": 55,
+   "yi": 20
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
   "id": "jushou",
   "name": "沮授",
   "aliases": [],
   "tier": "minor",
   "facts": 20,
+  "act": 20,
   "birth": null,
   "death": null,
   "stats": {
@@ -2945,11 +3115,35 @@
   "wiki": null
  },
  {
+  "id": "liugui",
+  "name": "劉璝",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 20,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 61,
+   "zhi": 25,
+   "zheng": 60,
+   "mei": 55,
+   "yi": 37
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
   "id": "liyan",
   "name": "李嚴",
   "aliases": [],
   "tier": "minor",
   "facts": 20,
+  "act": 20,
   "birth": null,
   "death": null,
   "stats": {
@@ -2967,13 +3161,37 @@
   "wiki": null
  },
  {
+  "id": "maliang",
+  "name": "馬良",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 20,
+  "birth": 187,
+  "death": 222,
+  "stats": {
+   "wu": 35,
+   "zhi": 88,
+   "zheng": 85,
+   "mei": 80,
+   "yi": 90
+  },
+  "face": {
+   "color": "white",
+   "beard": 0,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
   "id": "sunchen",
   "name": "孫綝",
   "aliases": [],
   "tier": "minor",
   "facts": 20,
-  "birth": null,
-  "death": null,
+  "act": 20,
+  "birth": 231,
+  "death": 258,
   "stats": {
    "wu": 40,
    "zhi": 63,
@@ -2994,6 +3212,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 20,
+  "act": 20,
   "birth": null,
   "death": null,
   "stats": {
@@ -3016,6 +3235,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 20,
+  "act": 20,
   "birth": null,
   "death": null,
   "stats": {
@@ -3038,8 +3258,9 @@
   "aliases": [],
   "tier": "minor",
   "facts": 19,
-  "birth": null,
-  "death": null,
+  "act": 19,
+  "birth": 200,
+  "death": 249,
   "stats": {
    "wu": 27,
    "zhi": 66,
@@ -3055,13 +3276,37 @@
   "wiki": null
  },
  {
+  "id": "liuyao",
+  "name": "劉繇",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 19,
+  "birth": 156,
+  "death": 197,
+  "stats": {
+   "wu": 35,
+   "zhi": 55,
+   "zheng": 62,
+   "mei": 68,
+   "yi": 60
+  },
+  "face": {
+   "color": "pink",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
   "id": "sunhao",
   "name": "孫皓",
   "aliases": [],
   "tier": "minor",
   "facts": 19,
-  "birth": null,
-  "death": null,
+  "act": 19,
+  "birth": 242,
+  "death": 284,
   "stats": {
    "wu": 30,
    "zhi": 34,
@@ -3082,6 +3327,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 19,
+  "act": 19,
   "birth": null,
   "death": null,
   "stats": {
@@ -3104,6 +3350,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 19,
+  "act": 19,
   "birth": null,
   "death": null,
   "stats": {
@@ -3121,11 +3368,35 @@
   "wiki": null
  },
  {
+  "id": "dongtuna",
+  "name": "董荼那",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 18,
+  "birth": null,
+  "death": 225,
+  "stats": {
+   "wu": 78,
+   "zhi": 40,
+   "zheng": 35,
+   "mei": 50,
+   "yi": 70
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
   "id": "guotu",
   "name": "郭圖",
   "aliases": [],
   "tier": "minor",
   "facts": 18,
+  "act": 18,
   "birth": null,
   "death": null,
   "stats": {
@@ -3148,6 +3419,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 18,
+  "act": 18,
   "birth": null,
   "death": null,
   "stats": {
@@ -3172,6 +3444,7 @@
   ],
   "tier": "major",
   "facts": 18,
+  "act": 18,
   "birth": null,
   "death": 189,
   "stats": {
@@ -3194,6 +3467,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 18,
+  "act": 18,
   "birth": null,
   "death": null,
   "stats": {
@@ -3211,11 +3485,58 @@
   "wiki": null
  },
  {
+  "id": "liucong",
+  "name": "劉琮",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 18,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 20,
+   "zhi": 35,
+   "zheng": 40,
+   "mei": 50,
+   "yi": 50
+  },
+  "face": {
+   "color": "pink",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "liuye",
+  "name": "劉曄",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 18,
+  "birth": null,
+  "death": 234,
+  "stats": {
+   "wu": 45,
+   "zhi": 92,
+   "zheng": 85,
+   "mei": 70,
+   "yi": 60
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
   "id": "sunli",
   "name": "孫禮",
   "aliases": [],
   "tier": "minor",
   "facts": 18,
+  "act": 18,
   "birth": null,
   "death": null,
   "stats": {
@@ -3233,11 +3554,127 @@
   "wiki": null
  },
  {
+  "id": "xiahoushang",
+  "name": "夏侯尚",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 18,
+  "birth": null,
+  "death": 226,
+  "stats": {
+   "wu": 78,
+   "zhi": 70,
+   "zheng": 65,
+   "mei": 65,
+   "yi": 75
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "xinpi",
+  "name": "辛毗",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 18,
+  "birth": null,
+  "death": 235,
+  "stats": {
+   "wu": 25,
+   "zhi": 84,
+   "zheng": 82,
+   "mei": 70,
+   "yi": 80
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "fushiren",
+  "name": "傅士仁",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 17,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 62,
+   "zhi": 40,
+   "zheng": 35,
+   "mei": 35,
+   "yi": 15
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "jiangwan",
+  "name": "蔣琬",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 17,
+  "birth": null,
+  "death": 246,
+  "stats": {
+   "wu": 25,
+   "zhi": 88,
+   "zheng": 92,
+   "mei": 78,
+   "yi": 88
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "leitong",
+  "name": "雷銅",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 17,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 46,
+   "zhi": 60,
+   "zheng": 35,
+   "mei": 59,
+   "yi": 43
+  },
+  "face": {
+   "color": "blue",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
   "id": "tianfeng",
   "name": "田豐",
   "aliases": [],
   "tier": "minor",
   "facts": 17,
+  "act": 17,
   "birth": null,
   "death": null,
   "stats": {
@@ -3255,6 +3692,29 @@
   "wiki": null
  },
  {
+  "id": "wangshuang",
+  "name": "王雙",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 17,
+  "birth": null,
+  "death": 228,
+  "stats": {
+   "wu": 88,
+   "zhi": 30,
+   "zheng": 20,
+   "mei": 40,
+   "yi": 55
+  },
+  "face": {
+   "color": "black",
+   "beard": 3,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "xuyou",
   "name": "許攸",
   "aliases": [
@@ -3263,6 +3723,7 @@
   ],
   "tier": "minor",
   "facts": 17,
+  "act": 17,
   "birth": null,
   "death": null,
   "stats": {
@@ -3280,11 +3741,81 @@
   "wiki": null
  },
  {
+  "id": "yuanxi",
+  "name": "袁熙",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 17,
+  "birth": null,
+  "death": 207,
+  "stats": {
+   "wu": 60,
+   "zhi": 50,
+   "zheng": 50,
+   "mei": 55,
+   "yi": 55
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhangji",
+  "name": "張濟",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 17,
+  "birth": null,
+  "death": 196,
+  "stats": {
+   "wu": 78,
+   "zhi": 45,
+   "zheng": 35,
+   "mei": 45,
+   "yi": 50
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhangnan",
+  "name": "張南",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 17,
+  "birth": null,
+  "death": 222,
+  "stats": {
+   "wu": 73,
+   "zhi": 48,
+   "zheng": 38,
+   "mei": 45,
+   "yi": 75
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "zhoucang",
   "name": "周倉",
   "aliases": [],
   "tier": "minor",
   "facts": 17,
+  "act": 17,
   "birth": null,
   "death": null,
   "stats": {
@@ -3307,8 +3838,9 @@
   "aliases": [],
   "tier": "minor",
   "facts": 17,
-  "birth": null,
-  "death": null,
+  "act": 17,
+  "birth": 195,
+  "death": 258,
   "stats": {
    "wu": 42,
    "zhi": 54,
@@ -3324,13 +3856,83 @@
   "wiki": null
  },
  {
+  "id": "mengyou",
+  "name": "孟優",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 16,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 65,
+   "zhi": 35,
+   "zheng": 30,
+   "mei": 45,
+   "yi": 60
+  },
+  "face": {
+   "color": "black",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "sunhuan",
+  "name": "孫桓",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 16,
+  "birth": 198,
+  "death": 223,
+  "stats": {
+   "wu": 78,
+   "zhi": 65,
+   "zheng": 55,
+   "mei": 60,
+   "yi": 75
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 0,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yiji",
+  "name": "伊籍",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 16,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 30,
+   "zhi": 78,
+   "zheng": 76,
+   "mei": 72,
+   "yi": 85
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
   "id": "caomao",
   "name": "曹髦",
   "aliases": [],
   "tier": "minor",
   "facts": 15,
-  "birth": null,
-  "death": null,
+  "act": 15,
+  "birth": 241,
+  "death": 260,
   "stats": {
    "wu": 21,
    "zhi": 26,
@@ -3346,11 +3948,150 @@
   "wiki": null
  },
  {
+  "id": "chenshi",
+  "name": "陳式",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": null,
+  "death": 231,
+  "stats": {
+   "wu": 70,
+   "zhi": 45,
+   "zheng": 35,
+   "mei": 45,
+   "yi": 55
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "dengxian",
+  "name": "鄧賢",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 15,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 38,
+   "zhi": 60,
+   "zheng": 75,
+   "mei": 28,
+   "yi": 46
+  },
+  "face": {
+   "color": "white",
+   "beard": 3,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "dengzhong",
+  "name": "鄧忠",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": 227,
+  "death": 264,
+  "stats": {
+   "wu": 84,
+   "zhi": 65,
+   "zheng": 50,
+   "mei": 55,
+   "yi": 85
+  },
+  "face": {
+   "color": "blue",
+   "beard": 0,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "fanchou",
+  "name": "樊稠",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": null,
+  "death": 195,
+  "stats": {
+   "wu": 76,
+   "zhi": 40,
+   "zheng": 25,
+   "mei": 40,
+   "yi": 35
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "gaoxiang",
+  "name": "高翔",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 72,
+   "zhi": 55,
+   "zheng": 45,
+   "mei": 50,
+   "yi": 75
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "houcheng",
+  "name": "侯成",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 70,
+   "zhi": 40,
+   "zheng": 30,
+   "mei": 40,
+   "yi": 20
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "huangfusong",
   "name": "皇甫嵩",
   "aliases": [],
   "tier": "minor",
   "facts": 15,
+  "act": 15,
   "birth": null,
   "death": null,
   "stats": {
@@ -3368,6 +4109,167 @@
   "wiki": null
  },
  {
+  "id": "lvfan",
+  "name": "呂範",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": null,
+  "death": 228,
+  "stats": {
+   "wu": 65,
+   "zhi": 75,
+   "zheng": 80,
+   "mei": 72,
+   "yi": 80
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wutugu",
+  "name": "兀突骨",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": null,
+  "death": 225,
+  "stats": {
+   "wu": 95,
+   "zhi": 20,
+   "zheng": 10,
+   "mei": 45,
+   "yi": 40
+  },
+  "face": {
+   "color": "black",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yangfu",
+  "name": "楊阜",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 60,
+   "zhi": 82,
+   "zheng": 80,
+   "mei": 65,
+   "yi": 85
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhuran",
+  "name": "朱然",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 15,
+  "birth": 182,
+  "death": 249,
+  "stats": {
+   "wu": 82,
+   "zhi": 72,
+   "zheng": 65,
+   "mei": 65,
+   "yi": 80
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "dongxi",
+  "name": "董襲",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 14,
+  "birth": null,
+  "death": 215,
+  "stats": {
+   "wu": 83,
+   "zhi": 45,
+   "zheng": 35,
+   "mei": 48,
+   "yi": 80
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "gaolan",
+  "name": "高覽",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 14,
+  "birth": null,
+  "death": 200,
+  "stats": {
+   "wu": 85,
+   "zhi": 55,
+   "zheng": 45,
+   "mei": 50,
+   "yi": 60
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "gongsunyuan",
+  "name": "公孫淵",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 14,
+  "birth": 200,
+  "death": 238,
+  "stats": {
+   "wu": 60,
+   "zhi": 50,
+   "zheng": 45,
+   "mei": 45,
+   "yi": 15
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "jianggan",
   "name": "蔣幹",
   "aliases": [
@@ -3375,6 +4277,7 @@
   ],
   "tier": "minor",
   "facts": 14,
+  "act": 14,
   "birth": null,
   "death": null,
   "stats": {
@@ -3397,8 +4300,9 @@
   "aliases": [],
   "tier": "minor",
   "facts": 14,
-  "birth": null,
-  "death": null,
+  "act": 14,
+  "birth": 236,
+  "death": 290,
   "stats": {
    "wu": 75,
    "zhi": 25,
@@ -3414,11 +4318,311 @@
   "wiki": null
  },
  {
+  "id": "chenwu",
+  "name": "陳武",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": 215,
+  "stats": {
+   "wu": 85,
+   "zhi": 45,
+   "zheng": 35,
+   "mei": 50,
+   "yi": 80
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "cuiliang",
+  "name": "崔諒",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 58,
+   "zhi": 48,
+   "zheng": 33,
+   "mei": 60,
+   "yi": 42
+  },
+  "face": {
+   "color": "red",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "fengji",
+  "name": "逢紀",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": 202,
+  "stats": {
+   "wu": 25,
+   "zhi": 78,
+   "zheng": 70,
+   "mei": 50,
+   "yi": 40
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "fengxi",
+  "name": "馮習",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": 222,
+  "stats": {
+   "wu": 75,
+   "zhi": 50,
+   "zheng": 40,
+   "mei": 45,
+   "yi": 75
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "hanxian",
+  "name": "韓暹",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": 197,
+  "stats": {
+   "wu": 65,
+   "zhi": 40,
+   "zheng": 30,
+   "mei": 35,
+   "yi": 30
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "lile",
+  "name": "李樂",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 20,
+   "zhi": 41,
+   "zheng": 46,
+   "mei": 74,
+   "yi": 40
+  },
+  "face": {
+   "color": "red",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "lisu",
+  "name": "李肅",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": 192,
+  "stats": {
+   "wu": 65,
+   "zhi": 55,
+   "zheng": 40,
+   "mei": 40,
+   "yi": 15
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "mazun",
+  "name": "馬遵",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 60,
+   "zhi": 29,
+   "zheng": 66,
+   "mei": 43,
+   "yi": 39
+  },
+  "face": {
+   "color": "white",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wangjing",
+  "name": "王經",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": 260,
+  "stats": {
+   "wu": 40,
+   "zhi": 70,
+   "zheng": 72,
+   "mei": 65,
+   "yi": 90
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "weixu",
+  "name": "魏續",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 67,
+   "zhi": 35,
+   "zheng": 25,
+   "mei": 38,
+   "yi": 20
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wulan",
+  "name": "吳蘭",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 57,
+   "zhi": 40,
+   "zheng": 39,
+   "mei": 63,
+   "yi": 50
+  },
+  "face": {
+   "color": "blue",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yangsong",
+  "name": "楊松",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": 215,
+  "stats": {
+   "wu": 20,
+   "zhi": 45,
+   "zheng": 40,
+   "mei": 25,
+   "yi": 5
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhanghu",
+  "name": "張虎",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 13,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 70,
+   "zhi": 45,
+   "zheng": 40,
+   "mei": 45,
+   "yi": 60
+  },
+  "face": {
+   "color": "blue",
+   "beard": 0,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "zhangsong",
   "name": "張松",
   "aliases": [],
   "tier": "minor",
   "facts": 13,
+  "act": 13,
   "birth": null,
   "death": null,
   "stats": {
@@ -3436,11 +4640,58 @@
   "wiki": null
  },
  {
+  "id": "chenying",
+  "name": "陳應",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 56,
+   "zhi": 49,
+   "zheng": 57,
+   "mei": 35,
+   "yi": 45
+  },
+  "face": {
+   "color": "black",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "chezhou",
+  "name": "車胄",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": 199,
+  "stats": {
+   "wu": 60,
+   "zhi": 40,
+   "zheng": 45,
+   "mei": 45,
+   "yi": 50
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
   "id": "haozhao",
   "name": "郝昭",
   "aliases": [],
   "tier": "minor",
   "facts": 12,
+  "act": 12,
   "birth": null,
   "death": null,
   "stats": {
@@ -3458,11 +4709,150 @@
   "wiki": null
  },
  {
+  "id": "lechen",
+  "name": "樂綝",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": 257,
+  "stats": {
+   "wu": 75,
+   "zhi": 50,
+   "zheng": 45,
+   "mei": 50,
+   "yi": 65
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "liupi",
+  "name": "劉辟",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 69,
+   "zhi": 73,
+   "zheng": 28,
+   "mei": 28,
+   "yi": 46
+  },
+  "face": {
+   "color": "pink",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "lvkuang",
+  "name": "呂曠",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 58,
+   "zhi": 34,
+   "zheng": 64,
+   "mei": 40,
+   "yi": 39
+  },
+  "face": {
+   "color": "black",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "songxian",
+  "name": "宋憲",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": 200,
+  "stats": {
+   "wu": 68,
+   "zhi": 35,
+   "zheng": 25,
+   "mei": 38,
+   "yi": 20
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wenqin",
+  "name": "文欽",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": 258,
+  "stats": {
+   "wu": 85,
+   "zhi": 45,
+   "zheng": 35,
+   "mei": 45,
+   "yi": 35
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wuqiujian",
+  "name": "毋丘儉",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": 255,
+  "stats": {
+   "wu": 78,
+   "zhi": 75,
+   "zheng": 68,
+   "mei": 65,
+   "yi": 60
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "zhangbao2",
   "name": "張寶",
   "aliases": [],
   "tier": "minor",
   "facts": 12,
+  "act": 12,
   "birth": null,
   "death": null,
   "stats": {
@@ -3480,11 +4870,244 @@
   "wiki": null
  },
  {
+  "id": "zhongyao",
+  "name": "鍾繇",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 12,
+  "birth": 151,
+  "death": 230,
+  "stats": {
+   "wu": 30,
+   "zhi": 85,
+   "zheng": 90,
+   "mei": 75,
+   "yi": 75
+  },
+  "face": {
+   "color": "white",
+   "beard": 2,
+   "hat": "civil",
+   "old": true
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhoufang",
+  "name": "周魴",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 12,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 60,
+   "zhi": 85,
+   "zheng": 70,
+   "mei": 60,
+   "yi": 60
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "caihe",
+  "name": "蔡和",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 48,
+   "zhi": 48,
+   "zheng": 71,
+   "mei": 27,
+   "yi": 44
+  },
+  "face": {
+   "color": "purple",
+   "beard": 0,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "caizhong",
+  "name": "蔡中",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 37,
+   "zhi": 24,
+   "zheng": 72,
+   "mei": 22,
+   "yi": 35
+  },
+  "face": {
+   "color": "purple",
+   "beard": 3,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "chengui",
+  "name": "陳珪",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 30,
+   "zhi": 80,
+   "zheng": 78,
+   "mei": 60,
+   "yi": 70
+  },
+  "face": {
+   "color": "white",
+   "beard": 2,
+   "hat": "civil",
+   "old": true
+  },
+  "wiki": null
+ },
+ {
+  "id": "dailing",
+  "name": "戴陵",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 11,
+  "birth": 200,
+  "death": null,
+  "stats": {
+   "wu": 65,
+   "zhi": 28,
+   "zheng": 55,
+   "mei": 46,
+   "yi": 50
+  },
+  "face": {
+   "color": "purple",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "dingyuan",
+  "name": "丁原",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": 189,
+  "stats": {
+   "wu": 70,
+   "zhi": 55,
+   "zheng": 55,
+   "mei": 60,
+   "yi": 70
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 2,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "fuqian",
+  "name": "傅僉",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": 263,
+  "stats": {
+   "wu": 86,
+   "zhi": 60,
+   "zheng": 45,
+   "mei": 55,
+   "yi": 92
+  },
+  "face": {
+   "color": "red",
+   "beard": 0,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "hanxuan",
+  "name": "韓玄",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": 209,
+  "stats": {
+   "wu": 45,
+   "zhi": 40,
+   "zheng": 45,
+   "mei": 35,
+   "yi": 25
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "huzun",
+  "name": "胡遵",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 75,
+   "zhi": 55,
+   "zheng": 50,
+   "mei": 50,
+   "yi": 60
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "luzhi",
   "name": "盧植",
   "aliases": [],
   "tier": "minor",
   "facts": 11,
+  "act": 11,
   "birth": null,
   "death": null,
   "stats": {
@@ -3502,11 +5125,104 @@
   "wiki": null
  },
  {
+  "id": "niujin",
+  "name": "牛金",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 70,
+   "zhi": 40,
+   "zheng": 30,
+   "mei": 40,
+   "yi": 60
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yangren",
+  "name": "楊任",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 11,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 48,
+   "zhi": 72,
+   "zheng": 31,
+   "mei": 30,
+   "yi": 47
+  },
+  "face": {
+   "color": "purple",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "gaogan",
+  "name": "高幹",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": 206,
+  "stats": {
+   "wu": 68,
+   "zhi": 55,
+   "zheng": 50,
+   "mei": 50,
+   "yi": 50
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "hanhao",
+  "name": "韓浩",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 72,
+   "zhi": 62,
+   "zheng": 65,
+   "mei": 55,
+   "yi": 75
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "huaxiong",
   "name": "華雄",
   "aliases": [],
   "tier": "major",
   "facts": 10,
+  "act": 10,
   "birth": null,
   "death": 191,
   "stats": {
@@ -3529,6 +5245,7 @@
   "aliases": [],
   "tier": "major",
   "facts": 10,
+  "act": 10,
   "birth": null,
   "death": 194,
   "stats": {
@@ -3547,13 +5264,221 @@
   "wiki": null
  },
  {
+  "id": "lvxiang",
+  "name": "呂翔",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 70,
+   "zhi": 32,
+   "zheng": 60,
+   "mei": 29,
+   "yi": 47
+  },
+  "face": {
+   "color": "pink",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "shendan",
+  "name": "申耽",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 71,
+   "zhi": 21,
+   "zheng": 37,
+   "mei": 60,
+   "yi": 41
+  },
+  "face": {
+   "color": "blue",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "simawang",
+  "name": "司馬望",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": 205,
+  "death": 271,
+  "stats": {
+   "wu": 70,
+   "zhi": 75,
+   "zheng": 72,
+   "mei": 60,
+   "yi": 60
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "sunjun",
+  "name": "孫峻",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": 219,
+  "death": 256,
+  "stats": {
+   "wu": 72,
+   "zhi": 60,
+   "zheng": 40,
+   "mei": 40,
+   "yi": 10
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 0,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wangguan",
+  "name": "王瓘",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 10,
+  "birth": 215,
+  "death": 262,
+  "stats": {
+   "wu": 46,
+   "zhi": 30,
+   "zheng": 58,
+   "mei": 59,
+   "yi": 50
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wangji",
+  "name": "王基",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": 190,
+  "death": 261,
+  "stats": {
+   "wu": 70,
+   "zhi": 82,
+   "zheng": 80,
+   "mei": 65,
+   "yi": 80
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wenyang",
+  "name": "文鴦",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": 238,
+  "death": 291,
+  "stats": {
+   "wu": 96,
+   "zhi": 55,
+   "zheng": 40,
+   "mei": 60,
+   "yi": 70
+  },
+  "face": {
+   "color": "red",
+   "beard": 0,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "xuzhi",
+  "name": "徐質",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": 254,
+  "stats": {
+   "wu": 85,
+   "zhi": 40,
+   "zheng": 30,
+   "mei": 45,
+   "yi": 55
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yangang",
+  "name": "楊昂",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 29,
+   "zhi": 71,
+   "zheng": 47,
+   "mei": 39,
+   "yi": 35
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
   "id": "yanghu",
   "name": "羊祜",
   "aliases": [],
   "tier": "minor",
   "facts": 10,
-  "birth": null,
-  "death": null,
+  "act": 10,
+  "birth": 221,
+  "death": 278,
   "stats": {
    "wu": 71,
    "zhi": 52,
@@ -3569,11 +5494,59 @@
   "wiki": null
  },
  {
+  "id": "zhanghong",
+  "name": "張紘",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": 153,
+  "death": 212,
+  "stats": {
+   "wu": 20,
+   "zhi": 86,
+   "zheng": 90,
+   "mei": 72,
+   "yi": 80
+  },
+  "face": {
+   "color": "white",
+   "beard": 2,
+   "hat": "civil",
+   "old": true
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhangyang",
+  "name": "張楊",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": 198,
+  "stats": {
+   "wu": 60,
+   "zhi": 55,
+   "zheng": 55,
+   "mei": 60,
+   "yi": 60
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
   "id": "zhangyun",
   "name": "張允",
   "aliases": [],
   "tier": "minor",
   "facts": 10,
+  "act": 10,
   "birth": null,
   "death": null,
   "stats": {
@@ -3591,11 +5564,173 @@
   "wiki": null
  },
  {
+  "id": "zhaofan",
+  "name": "趙範",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 40,
+   "zhi": 50,
+   "zheng": 55,
+   "mei": 50,
+   "yi": 45
+  },
+  "face": {
+   "color": "pink",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhoushan",
+  "name": "周善",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 10,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 55,
+   "zhi": 22,
+   "zheng": 71,
+   "mei": 32,
+   "yi": 40
+  },
+  "face": {
+   "color": "white",
+   "beard": 0,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhuhuan",
+  "name": "朱桓",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 10,
+  "birth": 177,
+  "death": 238,
+  "stats": {
+   "wu": 85,
+   "zhi": 75,
+   "zheng": 65,
+   "mei": 65,
+   "yi": 70
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "gengji",
+  "name": "耿紀",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 9,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 67,
+   "zhi": 53,
+   "zheng": 26,
+   "mei": 44,
+   "yi": 46
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "gongdou",
+  "name": "龔都",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 9,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 39,
+   "zhi": 59,
+   "zheng": 44,
+   "mei": 49,
+   "yi": 42
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "hanyin",
+  "name": "韓胤",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 9,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 58,
+   "zhi": 35,
+   "zheng": 28,
+   "mei": 69,
+   "yi": 38
+  },
+  "face": {
+   "color": "purple",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "jiakui",
+  "name": "賈逵",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 9,
+  "birth": 174,
+  "death": 228,
+  "stats": {
+   "wu": 55,
+   "zhi": 82,
+   "zheng": 84,
+   "mei": 68,
+   "yi": 80
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
   "id": "lengbao",
   "name": "冷苞",
   "aliases": [],
   "tier": "minor",
   "facts": 9,
+  "act": 9,
   "birth": null,
   "death": null,
   "stats": {
@@ -3613,13 +5748,129 @@
   "wiki": null
  },
  {
+  "id": "lvkai",
+  "name": "呂凱",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 9,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 40,
+   "zhi": 78,
+   "zheng": 80,
+   "mei": 65,
+   "yi": 88
+  },
+  "face": {
+   "color": "white",
+   "beard": 0,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "shizuan",
+  "name": "師纂",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 9,
+  "birth": 210,
+  "death": 264,
+  "stats": {
+   "wu": 47,
+   "zhi": 52,
+   "zheng": 46,
+   "mei": 45,
+   "yi": 37
+  },
+  "face": {
+   "color": "blue",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yanghuai",
+  "name": "楊懷",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 9,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 37,
+   "zhi": 28,
+   "zheng": 70,
+   "mei": 50,
+   "yi": 38
+  },
+  "face": {
+   "color": "pink",
+   "beard": 0,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yangqiu",
+  "name": "楊秋",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 9,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 54,
+   "zhi": 49,
+   "zheng": 32,
+   "mei": 54,
+   "yi": 44
+  },
+  "face": {
+   "color": "blue",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zangba",
+  "name": "臧霸",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 9,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 82,
+   "zhi": 65,
+   "zheng": 60,
+   "mei": 62,
+   "yi": 70
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "caohuan",
   "name": "曹奐",
   "aliases": [],
   "tier": "minor",
   "facts": 8,
-  "birth": null,
-  "death": null,
+  "act": 8,
+  "birth": 246,
+  "death": 302,
   "stats": {
    "wu": 53,
    "zhi": 58,
@@ -3640,8 +5891,9 @@
   "aliases": [],
   "tier": "minor",
   "facts": 8,
-  "birth": null,
-  "death": null,
+  "act": 8,
+  "birth": 222,
+  "death": 285,
   "stats": {
    "wu": 55,
    "zhi": 43,
@@ -3657,11 +5909,472 @@
   "wiki": null
  },
  {
+  "id": "feiyi",
+  "name": "費禕",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": 253,
+  "stats": {
+   "wu": 28,
+   "zhi": 87,
+   "zheng": 90,
+   "mei": 80,
+   "yi": 88
+  },
+  "face": {
+   "color": "white",
+   "beard": 0,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "futong",
+  "name": "傅彤",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": 222,
+  "stats": {
+   "wu": 82,
+   "zhi": 55,
+   "zheng": 40,
+   "mei": 50,
+   "yi": 92
+  },
+  "face": {
+   "color": "red",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "gaopei",
+  "name": "高沛",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 69,
+   "zhi": 32,
+   "zheng": 54,
+   "mei": 21,
+   "yi": 46
+  },
+  "face": {
+   "color": "pink",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "gongsunkang",
+  "name": "公孫康",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": 221,
+  "stats": {
+   "wu": 65,
+   "zhi": 70,
+   "zheng": 65,
+   "mei": 55,
+   "yi": 40
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "guanhai",
+  "name": "管亥",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": 195,
+  "stats": {
+   "wu": 78,
+   "zhi": 30,
+   "zheng": 20,
+   "mei": 35,
+   "yi": 40
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "heyan",
+  "name": "何晏",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": 195,
+  "death": 249,
+  "stats": {
+   "wu": 26,
+   "zhi": 53,
+   "zheng": 23,
+   "mei": 69,
+   "yi": 36
+  },
+  "face": {
+   "color": "black",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "jiangxu",
+  "name": "姜敍",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 43,
+   "zhi": 59,
+   "zheng": 43,
+   "mei": 43,
+   "yi": 43
+  },
+  "face": {
+   "color": "purple",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "jiaochu",
+  "name": "焦觸",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 51,
+   "zhi": 43,
+   "zheng": 22,
+   "mei": 69,
+   "yi": 38
+  },
+  "face": {
+   "color": "white",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "kuailiang",
+  "name": "蒯良",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 25,
+   "zhi": 82,
+   "zheng": 80,
+   "mei": 65,
+   "yi": 70
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "lifeng",
+  "name": "李豐",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": 200,
+  "death": 254,
+  "stats": {
+   "wu": 35,
+   "zhi": 40,
+   "zheng": 69,
+   "mei": 22,
+   "yi": 47
+  },
+  "face": {
+   "color": "white",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "maojie",
+  "name": "毛玠",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": 216,
+  "stats": {
+   "wu": 25,
+   "zhi": 80,
+   "zheng": 85,
+   "mei": 65,
+   "yi": 80
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "shenyi",
+  "name": "申儀",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 35,
+   "zhi": 36,
+   "zheng": 53,
+   "mei": 64,
+   "yi": 45
+  },
+  "face": {
+   "color": "black",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wangfu",
+  "name": "王甫",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": 222,
+  "stats": {
+   "wu": 35,
+   "zhi": 72,
+   "zheng": 70,
+   "mei": 60,
+   "yi": 88
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wangzifu",
+  "name": "王子服",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 53,
+   "zhi": 65,
+   "zheng": 43,
+   "mei": 26,
+   "yi": 40
+  },
+  "face": {
+   "color": "purple",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "weihuang",
+  "name": "韋晃",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 53,
+   "zhi": 28,
+   "zheng": 38,
+   "mei": 69,
+   "yi": 42
+  },
+  "face": {
+   "color": "white",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "xizheng",
+  "name": "郤正",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": 278,
+  "stats": {
+   "wu": 15,
+   "zhi": 78,
+   "zheng": 82,
+   "mei": 60,
+   "yi": 85
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "xujing",
+  "name": "許靖",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 58,
+   "zhi": 60,
+   "zheng": 32,
+   "mei": 38,
+   "yi": 45
+  },
+  "face": {
+   "color": "red",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yadan",
+  "name": "雅丹",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 35,
+   "zhi": 60,
+   "zheng": 55,
+   "mei": 45,
+   "yi": 50
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yangling",
+  "name": "楊陵",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 57,
+   "zhi": 36,
+   "zheng": 50,
+   "mei": 45,
+   "yi": 47
+  },
+  "face": {
+   "color": "red",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "yufan",
+  "name": "虞翻",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": 164,
+  "death": 233,
+  "stats": {
+   "wu": 30,
+   "zhi": 85,
+   "zheng": 78,
+   "mei": 55,
+   "yi": 60
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
   "id": "zhangliang",
   "name": "張梁",
   "aliases": [],
   "tier": "minor",
   "facts": 8,
+  "act": 8,
   "birth": null,
   "death": null,
   "stats": {
@@ -3679,11 +6392,104 @@
   "wiki": null
  },
  {
+  "id": "zhangying",
+  "name": "張英",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 69,
+   "zhi": 27,
+   "zheng": 39,
+   "mei": 42,
+   "yi": 42
+  },
+  "face": {
+   "color": "red",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhugezhan",
+  "name": "諸葛瞻",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": 227,
+  "death": 263,
+  "stats": {
+   "wu": 65,
+   "zhi": 72,
+   "zheng": 70,
+   "mei": 78,
+   "yi": 95
+  },
+  "face": {
+   "color": "purple",
+   "beard": 0,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhuling",
+  "name": "朱靈",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 78,
+   "zhi": 60,
+   "zheng": 50,
+   "mei": 50,
+   "yi": 65
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhuyi",
+  "name": "朱異",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 8,
+  "birth": null,
+  "death": 257,
+  "stats": {
+   "wu": 78,
+   "zhi": 70,
+   "zheng": 60,
+   "mei": 55,
+   "yi": 60
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "zoujing",
   "name": "鄒靖",
   "aliases": [],
   "tier": "minor",
   "facts": 8,
+  "act": 8,
   "birth": null,
   "death": null,
   "stats": {
@@ -3701,11 +6507,35 @@
   "wiki": null
  },
  {
+  "id": "caozhang",
+  "name": "曹彰",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 7,
+  "birth": 189,
+  "death": 223,
+  "stats": {
+   "wu": 92,
+   "zhi": 45,
+   "zheng": 40,
+   "mei": 65,
+   "yi": 80
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "chunyuqiong",
   "name": "淳于瓊",
   "aliases": [],
   "tier": "minor",
   "facts": 7,
+  "act": 7,
   "birth": null,
   "death": null,
   "stats": {
@@ -3723,13 +6553,268 @@
   "wiki": null
  },
  {
+  "id": "ehuan",
+  "name": "鄂煥",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 85,
+   "zhi": 30,
+   "zheng": 20,
+   "mei": 40,
+   "yi": 60
+  },
+  "face": {
+   "color": "black",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "huanfan",
+  "name": "桓範",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": 249,
+  "stats": {
+   "wu": 30,
+   "zhi": 82,
+   "zheng": 78,
+   "mei": 60,
+   "yi": 70
+  },
+  "face": {
+   "color": "white",
+   "beard": 2,
+   "hat": "civil",
+   "old": true
+  },
+  "wiki": null
+ },
+ {
+  "id": "huangkui",
+  "name": "黃奎",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 51,
+   "zhi": 33,
+   "zheng": 46,
+   "mei": 53,
+   "yi": 38
+  },
+  "face": {
+   "color": "black",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "jiangshu",
+  "name": "蔣舒",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": 210,
+  "death": null,
+  "stats": {
+   "wu": 45,
+   "zhi": 47,
+   "zheng": 52,
+   "mei": 40,
+   "yi": 39
+  },
+  "face": {
+   "color": "blue",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "kuaiyue",
+  "name": "蒯越",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": 214,
+  "stats": {
+   "wu": 30,
+   "zhi": 84,
+   "zheng": 82,
+   "mei": 68,
+   "yi": 55
+  },
+  "face": {
+   "color": "white",
+   "beard": 1,
+   "hat": "civil"
+  },
+  "wiki": null
+ },
+ {
+  "id": "limeng",
+  "name": "李蒙",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 55,
+   "zhi": 46,
+   "zheng": 62,
+   "mei": 20,
+   "yi": 49
+  },
+  "face": {
+   "color": "red",
+   "beard": 3,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "lisheng",
+  "name": "李勝",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": 200,
+  "death": 249,
+  "stats": {
+   "wu": 44,
+   "zhi": 41,
+   "zheng": 40,
+   "mei": 59,
+   "yi": 45
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "lixin",
+  "name": "李歆",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 40,
+   "zhi": 34,
+   "zheng": 67,
+   "mei": 22,
+   "yi": 42
+  },
+  "face": {
+   "color": "pink",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "niufu",
+  "name": "牛輔",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 67,
+   "zhi": 35,
+   "zheng": 59,
+   "mei": 23,
+   "yi": 47
+  },
+  "face": {
+   "color": "black",
+   "beard": 0,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "sunshao",
+  "name": "孫韶",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 7,
+  "birth": 188,
+  "death": 241,
+  "stats": {
+   "wu": 75,
+   "zhi": 65,
+   "zheng": 60,
+   "mei": 58,
+   "yi": 75
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
+  "id": "wangfang",
+  "name": "王方",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 51,
+   "zhi": 56,
+   "zheng": 23,
+   "mei": 54,
+   "yi": 41
+  },
+  "face": {
+   "color": "black",
+   "beard": 2,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
   "id": "wangjun",
   "name": "王濬",
   "aliases": [],
   "tier": "minor",
   "facts": 7,
-  "birth": null,
-  "death": null,
+  "act": 7,
+  "birth": 206,
+  "death": 286,
   "stats": {
    "wu": 32,
    "zhi": 67,
@@ -3745,11 +6830,104 @@
   "wiki": null
  },
  {
+  "id": "yangbai",
+  "name": "楊柏",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 36,
+   "zhi": 61,
+   "zheng": 50,
+   "mei": 36,
+   "yi": 50
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhangmiao",
+  "name": "張邈",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": 195,
+  "stats": {
+   "wu": 50,
+   "zhi": 60,
+   "zheng": 65,
+   "mei": 70,
+   "yi": 60
+  },
+  "face": {
+   "color": "yellow",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhangwei",
+  "name": "張衞",
+  "aliases": [],
+  "tier": "minor",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 39,
+   "zhi": 46,
+   "zheng": 56,
+   "mei": 42,
+   "yi": 39
+  },
+  "face": {
+   "color": "red",
+   "beard": 1,
+   "hat": "topknot"
+  },
+  "wiki": null
+ },
+ {
+  "id": "zhugexu",
+  "name": "諸葛緒",
+  "aliases": [],
+  "tier": "major",
+  "facts": 0,
+  "act": 7,
+  "birth": null,
+  "death": null,
+  "stats": {
+   "wu": 60,
+   "zhi": 60,
+   "zheng": 60,
+   "mei": 55,
+   "yi": 55
+  },
+  "face": {
+   "color": "blue",
+   "beard": 1,
+   "hat": "helmet"
+  },
+  "wiki": null
+ },
+ {
   "id": "chengyuanzhi",
   "name": "程遠志",
   "aliases": [],
   "tier": "minor",
   "facts": 5,
+  "act": 5,
   "birth": null,
   "death": null,
   "stats": {
@@ -3772,6 +6950,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 5,
+  "act": 5,
   "birth": null,
   "death": null,
   "stats": {
@@ -3794,6 +6973,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 4,
+  "act": 4,
   "birth": null,
   "death": null,
   "stats": {
@@ -3816,6 +6996,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 3,
+  "act": 3,
   "birth": null,
   "death": null,
   "stats": {
@@ -3838,6 +7019,7 @@
   "aliases": [],
   "tier": "minor",
   "facts": 2,
+  "act": 2,
   "birth": null,
   "death": null,
   "stats": {

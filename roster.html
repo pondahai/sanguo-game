@@ -37,16 +37,16 @@
     <option value="minor">配角(自動數值)</option>
   </select>
   <select id="sort">
-    <option value="facts">依出場事實數</option>
+    <option value="facts">依活躍度</option>
     <option value="wu">依武力</option>
     <option value="zhi">依智力</option>
   </select>
   <span class="count" id="count"></span>
 </div>
 <div class="grid" id="grid"></div>
-<script src="data/officers.js?v=9"></script>
-<script src="js/face.js?v=9"></script>
-<script src="js/wiki.js?v=9"></script>
+<script src="data/officers.js?v=23"></script>
+<script src="js/face.js?v=23"></script>
+<script src="js/wiki.js?v=23"></script>
 <style>
   #wikiwin { position:fixed; right:24px; top:60px; width:min(460px,90vw); height:min(600px,80vh);
     background:var(--card); border:1px solid var(--gold); border-radius:10px; z-index:40;
@@ -68,7 +68,9 @@ function card(o) {
     var v = o.stats[s[1]];
     h += '<div class="stat"><span>'+s[0]+'</span><span class="tk"><i style="width:'+v+'%;background:'+s[2]+'"></i></span><span>'+v+'</span></div>';
   });
-  h += '<span class="badge '+o.tier+'">' + (o.tier==="major"?"手調":"自動") + '・' + o.facts + ' 事實</span></div>';
+  var act = (typeof o.act === "number" ? o.act : o.facts);
+  h += '<span class="badge '+o.tier+'">' + (o.tier==="major"?"手調":"自動") + '・活躍 ' + act
+    + (o.facts ? "" : "*") + '</span></div>';
   return h;
 }
 function refresh() {
@@ -80,7 +82,7 @@ function refresh() {
     if (!q) return true;
     return o.name.indexOf(q) >= 0 || o.aliases.some(function(a){ return a.indexOf(q) >= 0; });
   });
-  list.sort(sort === "facts" ? function(a,b){ return b.facts - a.facts; }
+  list.sort(sort === "facts" ? function(a,b){ return (b.act||b.facts) - (a.act||a.facts); }
                              : function(a,b){ return b.stats[sort] - a.stats[sort]; });
   document.getElementById("grid").innerHTML = list.map(card).join("");
   document.getElementById("count").textContent = list.length + " / " + OFFICERS.length + " 人";

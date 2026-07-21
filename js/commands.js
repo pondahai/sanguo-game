@@ -66,7 +66,9 @@
         var S = State.get();
         var pool = freeOfficersIn(pid);
         if (!pool.length) return ex.name + "尋訪賢士，一無所獲";
-        if (Math.random() < ex.stats.mei / 150 + 0.2) {
+        /* 武將表擴到 296 人後在野密度近乎翻倍(每州 2.2→4.1、空州 7→1),
+           成功率同步下修, 把每月期望收穫拉回舊值附近 */
+        if (Math.random() < ex.stats.mei / 250 + 0.12) {
           var found = pool[0];
           S.off[found.name].fac = S.prov[pid].owner;
           S.off[found.name].loyal = 50 + Math.round(found.stats.yi / 4);
