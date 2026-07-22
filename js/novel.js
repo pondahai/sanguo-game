@@ -40,13 +40,16 @@
       if (!S.factions[f].alive) return;
       var ps = PROVINCES.filter(function (p) { return S.prov[p.id].owner === f; });
       if (!ps.length) return;
+      var ruler = S.factions[f].ruler;
+      /* 君主自己不列進麾下: 同一人同時掛「君主」與「麾下」會誘導 LLM 糾結身分矛盾 */
       var offs = window.OFFICERS.filter(function (o) {
         var st = S.off[o.name];
-        return st && !st.dead && st.fac === f;
+        return st && !st.dead && st.fac === f && o.name !== ruler;
       }).sort(function (a, b) { return (b.stats.wu + b.stats.zhi) - (a.stats.wu + a.stats.zhi); })
         .slice(0, 6).map(function (o) { return o.name; });
-      lines.push(S.factions[f].name + "(君主" + S.factions[f].ruler + "): 領" +
-        ps.map(function (p) { return p.name; }).join("、") + "; 麾下: " + offs.join("、"));
+      lines.push(S.factions[f].name + "——君主: " + ruler + "; 領地: " +
+        ps.map(function (p) { return p.name; }).join("、") +
+        "; 效力於" + ruler + "的武將: " + (offs.length ? offs.join("、") : "(無)"));
     });
     var neutral = PROVINCES.filter(function (p) { return !S.prov[p.id].owner; }).length;
     if (neutral) lines.push("中立州郡尚餘 " + neutral + " 處");
@@ -66,10 +69,12 @@
     var S = State.get();
     var sys = [
       "你是一位章回小說家，以《三國演義》的文體與筆調寫作白話章回小說。",
+      "【世界觀】本作是一部「架空三國演義」——由一場戰棋推演生成的平行世界線。人物的陣營歸屬、生死、勢力存續都可能與史實及原著《三國演義》大相逕庭：原本雄踞一方的君主，可能兵敗後在他人麾下效力；原本早亡者可能長壽；原本的宿敵可能同殿為臣。這些全是本世界線的既定事實，不是資料錯誤，你必須照單全收地寫下去。",
       "鐵則（違反即失格）：",
+      "0. 嚴禁後設評論：正文中不得出現任何質疑、糾正、註記或解釋輸入資料的文字（如「按史實某某應為君主，不應在某某麾下」「此處似有矛盾」「原著中…」「（註）」等），也不得用括號夾註向讀者說明設定。你是身在這個世界裡的說書人——對你而言這一切本來就是如此，無需驚訝，更不必辯解。",
       "1. 你只能根據使用者提供的【大事年表】與【天下大勢】寫作。年表中沒有的重大事件（戰役、攻城、死亡、被俘、投降、結盟、易主）一律不得出現。",
       "2. 嚴禁引入你記憶中真實《三國演義》的情節（桃園結義、三顧茅廬、赤壁之戰、白門樓等），除非年表中明確記載。這是一條與史實不同的世界線。",
-      "3. 出場人物僅限年表與大勢中出現者，且【天下大勢】中各勢力的麾下名單是人物歸屬的唯一依據——不得把名單外的武將寫進任何勢力，也不得替武將更換陣營。",
+      "3. 出場人物僅限年表與大勢中出現者，且【天下大勢】中各勢力的名單是人物歸屬的唯一依據，即使與你記憶中的史實或原著牴觸亦然——不得把名單外的武將寫進任何勢力，也不得替武將更換陣營，更不得因為「他本該是君主」之類的理由自行改寫其身分。",
       "3-1. 若年表中沒有「會盟」「聯軍」記載，則嚴禁出現十八路諸侯、共推盟主之類的橋段——各勢力是各自為戰的。",
       "4. 允許的潤飾：對話、心理、天氣、旌旗兵馬的描寫等不改變事實的細節。",
       "5. 章回體：每回以七言對聯回目開頭（如「第一回　○○○○○○○　○○○○○○○」），回末用「欲知後事如何，且聽下回分解。」（最後一回改為收束全書的結語）。",
