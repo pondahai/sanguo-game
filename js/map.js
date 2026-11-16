@@ -28,10 +28,26 @@
       var pv = S.prov[p.id];
       var sel = p.id === selectedId;
       var mine = pv.owner === S.player;
+      var done = mine && Commands.remaining(p.id) <= 0;
       svg += '<g class="node" data-id="' + p.id + '" style="cursor:pointer">';
-      svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="17" fill="' + factionColor(pv.owner) + '"' +
-        (sel ? ' stroke="#E0C040" stroke-width="4"' : mine ? ' stroke="#F0F0E0" stroke-width="1.5"' : "") + "/>";
-      if (mine && Commands.remaining(p.id) <= 0) {
+      /* 己方: 方形城 + 白框 (形狀辨識, 不靠顏色); 他方: 圓形 */
+      if (mine) {
+        if (!done) { /* 尚有命令未下: 呼吸光暈 */
+          svg += '<rect class="pending" x="' + (p.x - 25) + '" y="' + (p.y - 25) + '" width="50" height="50" rx="9"' +
+            ' fill="none" stroke="#F0D060" stroke-width="4"/>';
+        }
+        svg += '<rect x="' + (p.x - 17) + '" y="' + (p.y - 17) + '" width="34" height="34" rx="4" fill="' +
+          factionColor(pv.owner) + '" stroke="#F0F0E0" stroke-width="3.5"/>';
+      } else {
+        svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="17" fill="' + factionColor(pv.owner) + '"/>';
+      }
+      /* 選取: 外圈虛線金框, 不覆蓋己方標記 */
+      if (sel) {
+        svg += mine
+          ? '<rect x="' + (p.x - 30) + '" y="' + (p.y - 30) + '" width="60" height="60" rx="11" fill="none" stroke="#E0C040" stroke-width="3" stroke-dasharray="7 4"/>'
+          : '<circle cx="' + p.x + '" cy="' + p.y + '" r="26" fill="none" stroke="#E0C040" stroke-width="3" stroke-dasharray="7 4"/>';
+      }
+      if (done) {
         svg += '<text x="' + p.x + '" y="' + (p.y + 6) + '" text-anchor="middle" font-size="18" fill="#181410" font-weight="bold">✓</text>';
       }
       svg += '<text x="' + p.x + '" y="' + (p.y + 38) + '" text-anchor="middle" font-size="21" fill="#F0F0E0" font-weight="bold" style="paint-order:stroke;stroke:#181410;stroke-width:4px;">' + p.name + "</text>";
